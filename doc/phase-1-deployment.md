@@ -35,7 +35,7 @@ Esta captura muestra el estado del arranque y las interfaces finales:
 
 Esto valida que el firewall está “encendido y en su sitio”: WAN hacia Internet y LAN hacia la red interna.
 
-![OPNsense Console State](./evidencias/01-opnsense-console-state.png)
+![OPNsense Console State](./evidencias/01-opnsense-console-state.jng)
 
 **Validación técnica:**
 - LAN en 192.168.10.1/24 (gateway interno)
@@ -52,7 +52,7 @@ Esto demuestra que:
 - La VM de Ubuntu está conectada a la red interna correcta (Internal Network).
 - El servidor DHCP de OPNsense está funcionando y entregando direcciones.
 
-![Ubuntu IP Assignment](./evidencias/02-ubuntu-ip-a.png)
+![Ubuntu IP Assignment](./evidencias/02-ubuntu-ip-a.jng)
 
 **Validación técnica:**
 - IP asignada: `192.168.10.x/24`
@@ -69,7 +69,7 @@ Aquí se comprueba que Ubuntu tiene una **ruta por defecto** (default route) apu
 
 Esto es esencial: sin ruta por defecto no hay salida fuera de la red local.
 
-![Ubuntu Routing Table](./evidencias/03-ubuntu-ip-route.png)
+![Ubuntu Routing Table](./evidencias/03-ubuntu-ip-route.jng)
 
 **Validación técnica:**
 - Gateway de Ubuntu = `192.168.10.1`
@@ -86,7 +86,7 @@ Se realizan dos pruebas:
 2. `ping 8.8.8.8`  
    Verifica salida a Internet a través del firewall (NAT funcionando).
 
-![Ping Tests](./evidencias/04-ubuntu-ping-tests.png)
+![Ping Tests](./evidencias/04-ubuntu-ping-tests.jng)
 
 **Qué valida esta evidencia:**
 - Comunicación local: OK
@@ -103,7 +103,7 @@ Esta captura demuestra el acceso a la interfaz web:
 
 - URL: `https://192.168.10.1`
 
-![OPNsense Web Login](./evidencias/05-opnsense-web-login.png)
+![OPNsense Web Login](./evidencias/05-opnsense-web-login.jng)
 
 **Validación técnica:**
 - La Web GUI está disponible en la LAN
@@ -115,7 +115,7 @@ Esta captura demuestra el acceso a la interfaz web:
 
 Una vez dentro, el dashboard sirve como confirmación visual de estado del firewall y servicios.
 
-![OPNsense Dashboard](./evidencias/06-opnsense-dashboard.png)
+![OPNsense Dashboard](./evidencias/06-opnsense-dashboard.jng)
 
 **Validación técnica:**
 - El sistema está operativo
@@ -127,7 +127,7 @@ Una vez dentro, el dashboard sirve como confirmación visual de estado del firew
 
 Esta vista confirma la asignación de interfaces desde el panel web, útil para revisar que WAN/LAN no están invertidas.
 
-![OPNsense Interfaces Overview](./evidencias/07-opnsense-interfaces-overview.png)
+![OPNsense Interfaces Overview](./evidencias/07-opnsense-interfaces-overview.jng)
 
 **Validación técnica:**
 - WAN y LAN identificadas correctamente
@@ -139,7 +139,7 @@ Esta vista confirma la asignación de interfaces desde el panel web, útil para 
 
 Se valida la configuración del DHCPv4 en LAN, incluyendo el rango de direcciones entregadas.
 
-![OPNsense DHCP LAN](./evidencias/08-opnsense-dhcp-lan.png)
+![OPNsense DHCP LAN](./evidencias/08-opnsense-dhcp-lan.jng)
 
 **Validación técnica:**
 - DHCP habilitado en LAN
