@@ -1,5 +1,9 @@
 # Linux Hardening Attack & Defense Lab
 
+## Lab Architecture
+
+![Lab Architecture](./architecture/lab-architecture.png)
+
 ## 1. Objetivo
 
 Este laboratorio complementario tiene como objetivo desplegar un entorno aislado para practicar hardening de un servidor Linux, auditoría de seguridad y validación mediante ataques controlados.
@@ -159,3 +163,24 @@ Este laboratorio demuestra un flujo completo de seguridad ofensiva y defensiva:
 
 Este escenario reproduce un flujo típico de **detección y respuesta utilizado en entornos SOC y Blue Team**, permitiendo observar cómo un sistema Linux puede detectar y mitigar ataques de fuerza bruta.
 
+## Tools Used
+
+- VirtualBox
+- Ubuntu Server
+- Kali Linux
+- Nmap
+- Hydra
+- Fail2ban
+- Lynis
+- OpenSSH
+- Apache
+
+## Skills Demonstrated
+
+- Linux server administration
+- SSH hardening
+- Brute force attack simulation
+- Security log analysis
+- Intrusion detection
+- Automated incident response
+- Host hardening validation
