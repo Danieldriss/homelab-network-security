@@ -112,3 +112,15 @@ Tras aplicar las medidas de hardening:
 - tráfico supervisado por el firewall
 
 La arquitectura resultante implementa un modelo básico de **segmentación de red segura**, utilizado habitualmente en entornos corporativos para proteger servicios expuestos.
+
+## Conclusión
+
+La aplicación de medidas de hardening en el firewall permite reforzar significativamente la seguridad de la arquitectura del laboratorio.
+
+Mediante la correcta segmentación de red y la implementación de reglas restrictivas en OPNsense, se consigue:
+
+- Aislar la red interna de los servicios expuestos en la DMZ.
+- Limitar el tráfico permitido únicamente a los servicios necesarios.
+- Registrar y monitorizar intentos de comunicación no autorizados.
+
+Este enfoque reproduce un modelo de seguridad común en entornos empresariales donde los servicios públicos se ubican en una DMZ mientras que los sistemas internos permanecen protegidos detrás del firewall.
