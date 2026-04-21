@@ -82,8 +82,6 @@ La petición también ha sido interceptada para observar cómo se envía el payl
 
 Evidencias asociadas:
 
-![08-xss-reflected-form](./evidencias/08-xss-reflected-form.png)
-
 ![09-xss-alert](./evidencias/09-xss-alert.png)
 
 ![10-burp-xss-request](./evidencias/10-burp-xss-request.png.jpg)
