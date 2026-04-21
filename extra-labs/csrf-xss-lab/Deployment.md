@@ -62,10 +62,13 @@ La petición generada se ha interceptado con Burp Suite, permitiendo observar lo
 
 Evidencias asociadas:
 
-- 01-dvwa-security-low.png  
-- 02-csrf-form.png  
-- 06-burp-request-csrf.png  
-- 07-password-changed.png  
+![01-dvwa-security-low](./evidencias/01-dvwa-security-low.png)
+
+![02-csrf-form](./evidencias/02-csrf-form.png)
+
+![06-burp-request-csrf](./evidencias/06-burp-request-csrf.png)
+
+![07-password-changed](./evidencias/07-password-changed.png)
 
 ---
 
@@ -79,9 +82,11 @@ La petición también ha sido interceptada para observar cómo se envía el payl
 
 Evidencias asociadas:
 
-- 08-xss-reflected-form.png  
-- 09-xss-alert.png  
-- 10-burp-xss-request.png  
+![08-xss-reflected-form](./evidencias/08-xss-reflected-form.png)
+
+![09-xss-alert](./evidencias/09-xss-alert.png)
+
+![10-burp-xss-request](./evidencias/10-burp-xss-request.png)
 
 ---
 
@@ -95,9 +100,11 @@ Este paso representa un escenario más realista donde un atacante encadena vulne
 
 Evidencias asociadas:
 
-- 11-xss-link.png  
-- 12-csrf-executed-from-xss.png  
-- 13-xss-auto-csrf.png  
+![11-xss-link](./evidencias/11-xss-link.png)
+
+![12-csrf-executed-from-xss](./evidencias/12-csrf-executed-from-xss.png)
+
+![13-xss-auto-csrf](./evidencias/13-xss-auto-csrf.png)
 
 ---
 
