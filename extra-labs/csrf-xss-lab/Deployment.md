@@ -86,7 +86,7 @@ Evidencias asociadas:
 
 ![09-xss-alert](./evidencias/09-xss-alert.png)
 
-![10-burp-xss-request](./evidencias/10-burp-xss-request.png)
+![10-burp-xss-request](./evidencias/10-burp-xss-request.png.jpg)
 
 ---
 
@@ -100,11 +100,11 @@ Este paso representa un escenario más realista donde un atacante encadena vulne
 
 Evidencias asociadas:
 
-![11-xss-link](./evidencias/11-xss-link.png)
+![11-xss-link](./evidencias/11-xss-link.png.jpg)
 
-![12-csrf-executed-from-xss](./evidencias/12-csrf-executed-from-xss.png)
+![12-csrf-executed-from-xss](./evidencias/12-csrf-executed-from-xss.png.jpg)
 
-![13-xss-auto-csrf](./evidencias/13-xss-auto-csrf.png)
+![13-xss-auto-csrf](./evidencias/13-xss-auto-csrf.png.jpg)
 
 ---
 
