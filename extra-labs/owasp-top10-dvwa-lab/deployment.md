@@ -1,31 +1,34 @@
 # OWASP Top 10 - DVWA Lab
 
-## Description
+## Descripción
 
-This lab focuses on the practical exploitation of common web application vulnerabilities included in the OWASP Top 10 using Damn Vulnerable Web Application (DVWA).
+Este laboratorio tiene como objetivo practicar de forma controlada las principales vulnerabilidades incluidas en **OWASP Top 10** utilizando **Damn Vulnerable Web Application (DVWA)**.
 
-The environment consists of a Kali Linux attacker machine and an Ubuntu server hosting Apache, MariaDB, PHP and DVWA.
+Para ello se desplegó un entorno compuesto por una máquina **Kali Linux** como atacante y un servidor **Ubuntu Server** con Apache, PHP, MariaDB y DVWA.
 
----
-
-# Objectives
-
-- Install and configure DVWA.
-- Practice common OWASP Top 10 vulnerabilities.
-- Intercept HTTP requests using Burp Suite.
-- Exploit vulnerabilities in Low security level.
-- Document findings with screenshots.
-- Propose mitigation techniques.
+Durante el laboratorio se explotaron distintas vulnerabilidades web documentando cada una de ellas mediante capturas de pantalla y proponiendo sus correspondientes medidas de mitigación.
 
 ---
 
-# Technologies
+# Objetivos
+
+- Instalar y configurar DVWA.
+- Configurar un laboratorio de pentesting web.
+- Practicar vulnerabilidades OWASP Top 10.
+- Utilizar Burp Suite para interceptar peticiones HTTP.
+- Comprender el impacto de las vulnerabilidades web.
+- Documentar evidencias de explotación.
+- Proponer medidas de mitigación.
+
+---
+
+# Tecnologías utilizadas
 
 - Kali Linux
 - Ubuntu Server
 - Apache2
-- MariaDB
 - PHP
+- MariaDB
 - DVWA
 - Burp Suite
 - Firefox
@@ -33,285 +36,284 @@ The environment consists of a Kali Linux attacker machine and an Ubuntu server h
 
 ---
 
-# Laboratory Architecture
+# Arquitectura del laboratorio
 
 ```text
                  +----------------------+
                  |      Kali Linux      |
-                 |     Attacker VM      |
-                 |  Burp Suite / Firefox|
+                 |    Burp Suite        |
+                 |      Firefox         |
                  +----------+-----------+
                             |
+                      HTTP Requests
                             |
-                     HTTP Requests
                             |
-                            v
-                 +----------------------+
+                 +----------v-----------+
                  |    Ubuntu Server     |
                  | Apache + PHP + DVWA  |
                  |      MariaDB         |
-                 |     10.0.3.10        |
                  +----------------------+
 ```
 
 ---
 
-# Vulnerabilities Covered
+# Instalación
+
+Se instaló un servidor Ubuntu con un entorno LAMP compuesto por Apache, PHP y MariaDB.
+
+Posteriormente se descargó DVWA desde GitHub, se configuró la base de datos y se modificó el archivo `config.inc.php` para completar la instalación.
+
+Finalmente se verificó el acceso a la aplicación desde Kali Linux y se estableció el nivel de seguridad en **Low** para realizar las pruebas.
+
+## Evidencias
+
+### Instalación completada
+
+![Instalación DVWA](evidencias/13-dvwa-installation-complete.jpg)
+
+### Nivel de seguridad
+
+![Security Level](evidencias/14-dvwa-security-low-final.jpg)
+
+---
+
+# Vulnerabilidades Analizadas
 
 ## CSRF (Cross Site Request Forgery)
 
-A forged HTTP request was generated to change another user's password without their consent.
+Se realizó una petición HTTP manipulada para modificar la contraseña de otro usuario sin su consentimiento.
 
-### Evidence
+### Evidencias
 
-- 02-csrf-form.jpg
-- 06-burp-request-csrf.jpg
-- 07-password-changed.jpg
-- 11-csrf-executed-from-xss.jpg
-- 12-xss-auto-csrf.jpg
+![Formulario CSRF](evidencias/02-csrf-form.jpg)
 
-### Mitigation
+![Burp CSRF](evidencias/06-burp-request-csrf.jpg)
 
-- CSRF Tokens
-- SameSite Cookies
-- Referer / Origin validation
+![Cambio de contraseña](evidencias/07-password-changed.jpg)
+
+![CSRF desde XSS](evidencias/11-csrf-executed-from-xss.jpg)
+
+![CSRF Automático](evidencias/12-xss-auto-csrf.jpg)
+
+### Mitigación
+
+- Uso de Tokens CSRF.
+- Cookies SameSite.
+- Validación del encabezado Origin.
 
 ---
 
 ## Cross Site Scripting (XSS)
 
-Different XSS attacks were performed to execute JavaScript code inside the victim browser.
+Se ejecutó código JavaScript dentro del navegador de la víctima aprovechando una validación insuficiente de entradas.
 
-### Evidence
+### Evidencias
 
-- 08-xss-alert.jpg
-- 09-burp-xss-request.jpg
-- 10-xss-link.jpg
+![XSS Alert](evidencias/08-xss-alert.jpg)
 
-### Mitigation
+![Burp XSS](evidencias/09-burp-xss-request.jpg)
 
-- Output Encoding
-- Input Validation
-- Content Security Policy (CSP)
+![XSS Link](evidencias/10-xss-link.jpg)
+
+### Mitigación
+
+- Escape de caracteres.
+- Validación de entradas.
+- Content Security Policy (CSP).
 
 ---
 
 ## SQL Injection
 
-SQL Injection was exploited to retrieve information from the backend database.
+Se explotó una vulnerabilidad SQL Injection para acceder a información de la base de datos.
 
-Payload used:
+Payload utilizado:
 
 ```sql
 1' OR '1'='1
 ```
 
-### Evidence
+### Evidencias
 
-- 15-sql-injection.jpg
+![SQL Injection](evidencias/15-sql-injection.jpg)
 
-### Mitigation
+### Mitigación
 
-- Prepared Statements
-- Parameterized Queries
-- ORM
-- Input Validation
+- Consultas preparadas.
+- ORM.
+- Validación de entradas.
 
 ---
 
 ## Command Injection
 
-Operating system commands were executed through vulnerable user input.
+Se ejecutaron comandos del sistema operativo desde la aplicación web.
 
-Payload used:
+Payload utilizado:
 
 ```bash
 127.0.0.1 && whoami
 ```
 
-### Evidence
+### Evidencias
 
-- 16-command-injection.jpg
+![Command Injection](evidencias/16-command-injection.jpg)
 
-### Mitigation
+### Mitigación
 
-- Input Validation
-- Whitelisting
-- Avoid system() calls
-
----
+- Validación estricta de entradas.
+- Uso de listas blancas.
+- Evitar llamadas directas al sistema operativo.
 
 ## File Upload
 
-A malicious PHP file was uploaded to the vulnerable application.
+Se aprovechó una validación insuficiente para subir un archivo PHP al servidor.
 
-### Evidence
+### Evidencias
 
-- 17-file-upload-success.jpg
-- 18-web-shell-execution.jpg
+![File Upload](evidencias/17-file-upload-success.jpg)
 
-### Mitigation
+![Web Shell](evidencias/18-web-shell-execution.jpg)
 
-- MIME validation
-- File extension validation
-- Store uploads outside web root
+### Mitigación
+
+- Validar extensión y MIME Type.
+- Almacenar archivos fuera del directorio público.
+- Renombrar automáticamente los archivos subidos.
 
 ---
 
 ## Local File Inclusion (LFI)
 
-A Local File Inclusion attack was performed to read the Linux passwd file.
+Se explotó una vulnerabilidad LFI para acceder al archivo `/etc/passwd` del sistema Linux.
 
-Payload used:
+Payload utilizado:
 
 ```text
 ../../../../../../etc/passwd
 ```
 
-### Evidence
+### Evidencias
 
-- 19-local-file-inclusion.jpg
+![Local File Inclusion](evidencias/19-local-file-inclusion.jpg)
 
-### Mitigation
+### Mitigación
 
-- Validate file paths
-- Avoid user-controlled includes
-- Restrict include directories
+- Validar rutas.
+- Evitar includes dinámicos controlados por el usuario.
+- Limitar los directorios accesibles.
 
 ---
 
 ## Weak Session IDs
 
-Session identifiers were reviewed to determine whether they followed predictable patterns.
+Se revisó el comportamiento de las cookies de sesión para comprobar la generación de identificadores.
 
-### Evidence
+### Evidencias
 
-- 20-weak-session-cookie.jpg
+![Weak Session Cookie](evidencias/20-weak-session-cookie.jpg)
 
-### Mitigation
+### Mitigación
 
-- Cryptographically secure random session IDs
-- Regenerate sessions after login
-- Secure Cookies
+- IDs aleatorios criptográficamente seguros.
+- Regenerar la sesión tras autenticarse.
+- Cookies Secure y HttpOnly.
 
 ---
 
-## Version Detection (PHP Info)
+## PHP Info
 
-The phpinfo() page was reviewed to identify exposed server information.
+Se analizó la información expuesta por `phpinfo()` para identificar versiones y configuración del servidor.
 
-### Evidence
+### Evidencias
 
-- 21-phpinfo-version.jpg
+![PHP Info](evidencias/21-phpinfo-version.jpg)
 
-### Mitigation
+### Mitigación
 
-- Disable phpinfo()
-- Hide server banners
-- Reduce information disclosure
+- Eliminar phpinfo() en producción.
+- Ocultar versiones.
+- Reducir la información expuesta.
 
 ---
 
 ## Open HTTP Redirect
 
-The Open Redirect laboratory was reviewed to understand how users can be redirected to malicious websites.
+Se revisó el funcionamiento del laboratorio de redirecciones abiertas.
 
-### Evidence
+### Evidencias
 
-- 22-open-http-redirect.jpg
+![Open Redirect](evidencias/22-open-http-redirect.jpg)
 
-### Mitigation
+### Mitigación
 
-- Validate redirect destinations
-- Use allowlists
-- Avoid user-controlled redirects
+- Validar URLs de destino.
+- Utilizar listas blancas.
+- Evitar redirecciones controladas por el usuario.
 
 ---
 
 ## Cryptography
 
-The Cryptography module was reviewed to understand common cryptographic failures.
+Se revisó el laboratorio relacionado con fallos criptográficos.
 
-### Evidence
+### Evidencias
 
-- 23-cryptography.jpg
+![Cryptography](evidencias/23-cryptography.jpg)
 
-### Mitigation
+### Mitigación
 
-- HTTPS
-- Strong hashing algorithms
-- Secure key management
+- HTTPS.
+- Algoritmos robustos.
+- Gestión segura de claves.
 
 ---
 
 ## Security Logging
 
-Apache logs were reviewed after performing attacks.
+Se revisaron los registros generados por Apache después de realizar las pruebas.
 
-### Evidence
+### Evidencias
 
-- 24-apache-access-log.jpg
+![Apache Logs](evidencias/24-apache-access-log.jpg)
 
-### Mitigation
+### Mitigación
 
-- Centralized logging
-- SIEM monitoring
-- Alert generation
-
----
-
-# Screenshots
-
-```
-screenshots/
-├── 01-dvwa-security-low.jpg
-├── 02-csrf-form.jpg
-├── 03-burp-intercept-on.jpg
-├── 04-firefox-proxy-burp.jpg
-├── 05-burp-capture-web.jpg
-├── 06-burp-request-csrf.jpg
-├── 07-password-changed.jpg
-├── 08-xss-alert.jpg
-├── 09-burp-xss-request.jpg
-├── 10-xss-link.jpg
-├── 11-csrf-executed-from-xss.jpg
-├── 12-xss-auto-csrf.jpg
-├── 13-dvwa-installation-complete.jpg
-├── 14-dvwa-security-low-final.jpg
-├── 15-sql-injection.jpg
-├── 16-command-injection.jpg
-├── 17-file-upload-success.jpg
-├── 18-web-shell-execution.jpg
-├── 19-local-file-inclusion.jpg
-├── 20-weak-session-cookie.jpg
-├── 21-phpinfo-version.jpg
-├── 22-open-http-redirect.jpg
-├── 23-cryptography.jpg
-└── 24-apache-access-log.jpg
-```
+- Centralizar logs.
+- Configurar alertas.
+- Integración con SIEM.
 
 ---
 
-# Skills Acquired
+# Competencias adquiridas
 
-- Web Application Security
 - OWASP Top 10
 - DVWA
+- Web Application Security
 - Burp Suite
 - SQL Injection
 - Command Injection
 - Cross Site Scripting (XSS)
 - CSRF
 - File Upload
-- Local File Inclusion (LFI)
+- Local File Inclusion
 - Session Management
-- Web Enumeration
-- Security Misconfiguration
-- Logging & Monitoring
+- Security Logging
+- Pentesting Web
 
 ---
 
-# References
+# Conclusiones
+
+Este laboratorio permitió comprender de forma práctica el funcionamiento de las principales vulnerabilidades incluidas en OWASP Top 10.
+
+Durante las pruebas se utilizaron diferentes técnicas de explotación sobre un entorno controlado, identificando su impacto y analizando las principales medidas de mitigación que deberían aplicarse en aplicaciones web reales.
+
+El laboratorio constituye una excelente base para continuar aprendiendo técnicas de pentesting web y análisis de vulnerabilidades en aplicaciones.
+
+---
+
+# Referencias
 
 - https://owasp.org/www-project-top-ten/
 - https://github.com/digininja/DVWA
@@ -320,8 +322,8 @@ screenshots/
 
 ---
 
-# Author
+# Autor
 
 Daniel Driss
 
-Cybersecurity Student | SOC Analyst | Blue Team
+SOC Analyst | Cybersecurity Student | Blue Team
