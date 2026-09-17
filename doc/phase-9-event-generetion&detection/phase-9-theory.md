@@ -1,16 +1,16 @@
-\# Parte teórica de la fase
+﻿\# Parte teÃ³rica de la fase
 
 
 
-\## Introducción
+\## IntroducciÃ³n
 
 
 
-En esta fase se generan eventos de seguridad dentro del laboratorio para comprobar la capacidad de detección del entorno implementado.
+En esta fase se generan eventos de seguridad dentro del laboratorio para comprobar la capacidad de detecciÃ³n del entorno implementado.
 
 
 
-El objetivo es pasar de una infraestructura únicamente monitorizada a un escenario donde se produce actividad real y posteriormente se analiza mediante Wazuh.
+El objetivo es pasar de una infraestructura Ãºnicamente monitorizada a un escenario donde se produce actividad real y posteriormente se analiza mediante Wazuh.
 
 
 
@@ -18,11 +18,11 @@ El objetivo es pasar de una infraestructura únicamente monitorizada a un escena
 
 
 
-\## Generación de eventos
+\## GeneraciÃ³n de eventos
 
 
 
-Para comprobar un sistema de monitorización es necesario generar actividad que pueda quedar registrada.
+Para comprobar un sistema de monitorizaciÃ³n es necesario generar actividad que pueda quedar registrada.
 
 
 
@@ -34,7 +34,7 @@ En esta fase se utilizan eventos como:
 
 \- autenticaciones SSH fallidas
 
-\- múltiples intentos de acceso
+\- mÃºltiples intentos de acceso
 
 \- actividad de reconocimiento de red
 
@@ -44,7 +44,7 @@ En esta fase se utilizan eventos como:
 
 
 
-\## Autenticación SSH
+\## AutenticaciÃ³n SSH
 
 
 
@@ -52,7 +52,7 @@ SSH permite administrar sistemas de forma remota.
 
 
 
-Los intentos de autenticación generan registros que pueden utilizarse para identificar accesos legítimos y comportamientos sospechosos.
+Los intentos de autenticaciÃ³n generan registros que pueden utilizarse para identificar accesos legÃ­timos y comportamientos sospechosos.
 
 
 
@@ -64,11 +64,11 @@ Los intentos de autenticación generan registros que pueden utilizarse para iden
 
 
 
-Un ataque de fuerza bruta consiste en realizar múltiples intentos de autenticación con el objetivo de encontrar credenciales válidas.
+Un ataque de fuerza bruta consiste en realizar mÃºltiples intentos de autenticaciÃ³n con el objetivo de encontrar credenciales vÃ¡lidas.
 
 
 
-Un único fallo puede ser legítimo.
+Un Ãºnico fallo puede ser legÃ­timo.
 
 
 
@@ -84,7 +84,7 @@ Sin embargo, muchos intentos fallidos en un periodo corto pueden representar un 
 
 
 
-El reconocimiento consiste en recopilar información sobre sistemas, puertos y servicios disponibles.
+El reconocimiento consiste en recopilar informaciÃ³n sobre sistemas, puertos y servicios disponibles.
 
 
 
@@ -92,7 +92,7 @@ Herramientas de escaneo permiten identificar posibles puntos de entrada antes de
 
 
 
-La visibilidad de este tipo de actividad depende de las fuentes de logs y de las reglas de detección disponibles.
+La visibilidad de este tipo de actividad depende de las fuentes de logs y de las reglas de detecciÃ³n disponibles.
 
 
 
@@ -100,7 +100,7 @@ La visibilidad de este tipo de actividad depende de las fuentes de logs y de las
 
 
 
-\## Detección mediante SIEM
+\## DetecciÃ³n mediante SIEM
 
 
 
@@ -108,13 +108,13 @@ Wazuh analiza los eventos recibidos desde los agentes.
 
 
 
-La detección depende de:
+La detecciÃ³n depende de:
 
 
 
 \- calidad de los logs
 
-\- configuración del agente
+\- configuraciÃ³n del agente
 
 \- reglas existentes
 
@@ -124,7 +124,7 @@ La detección depende de:
 
 
 
-Un SIEM no detecta automáticamente cualquier comportamiento posible.
+Un SIEM no detecta automÃ¡ticamente cualquier comportamiento posible.
 
 
 
@@ -136,11 +136,11 @@ Un SIEM no detecta automáticamente cualquier comportamiento posible.
 
 
 
-Un evento es una acción registrada por un sistema.
+Un evento es una acciÃ³n registrada por un sistema.
 
 
 
-Una alerta se genera cuando dicho evento cumple determinadas condiciones de detección.
+Una alerta se genera cuando dicho evento cumple determinadas condiciones de detecciÃ³n.
 
 
 
@@ -152,11 +152,11 @@ Por tanto, disponer de logs no significa necesariamente que toda actividad gener
 
 
 
-\## Análisis de eventos
+\## AnÃ¡lisis de eventos
 
 
 
-El analista debe interpretar la información para determinar si una actividad es legítima o sospechosa.
+El analista debe interpretar la informaciÃ³n para determinar si una actividad es legÃ­tima o sospechosa.
 
 
 
@@ -164,7 +164,7 @@ Para ello puede analizar:
 
 
 
-\- dirección IP de origen
+\- direcciÃ³n IP de origen
 
 \- usuario
 
@@ -186,11 +186,11 @@ Para ello puede analizar:
 
 
 
-\- SIEM sin validación práctica
+\- SIEM sin validaciÃ³n prÃ¡ctica
 
 \- desconocimiento de la calidad de los logs
 
-\- falta de pruebas de detección
+\- falta de pruebas de detecciÃ³n
 
 \- ausencia de eventos reales para analizar
 
@@ -220,7 +220,7 @@ Para ello puede analizar:
 
 
 
-\## Cómo detectar errores
+\## CÃ³mo detectar errores
 
 
 
@@ -240,15 +240,15 @@ Para ello puede analizar:
 
 
 
-\## Cómo solucionarlos
+\## CÃ³mo solucionarlos
 
 
 
-\- revisar la configuración de logging
+\- revisar la configuraciÃ³n de logging
 
 \- comprobar los agentes
 
-\- validar la comunicación con Wazuh
+\- validar la comunicaciÃ³n con Wazuh
 
 \- ajustar las fuentes de eventos cuando sea necesario
 
@@ -258,21 +258,21 @@ Para ello puede analizar:
 
 
 
-\## Qué se aprende
+\## QuÃ© se aprende
 
 
 
-\- generación de eventos
+\- generaciÃ³n de eventos
 
-\- análisis de autenticaciones
+\- anÃ¡lisis de autenticaciones
 
-\- detección de actividad sospechosa
+\- detecciÃ³n de actividad sospechosa
 
 \- diferencia entre logs y alertas
 
-\- funcionamiento práctico de un SIEM
+\- funcionamiento prÃ¡ctico de un SIEM
 
-\- análisis básico desde perspectiva SOC
+\- anÃ¡lisis bÃ¡sico desde perspectiva SOC
 
 
 
@@ -280,9 +280,9 @@ Para ello puede analizar:
 
 
 
-\## Relación con el mundo real
+\## RelaciÃ³n con el mundo real
 
 
 
-Los equipos Blue Team realizan pruebas de detección para comprobar que las actividades relevantes quedan registradas y pueden ser investigadas por los analistas de seguridad.
+Los equipos Blue Team realizan pruebas de detecciÃ³n para comprobar que las actividades relevantes quedan registradas y pueden ser investigadas por los analistas de seguridad.
 

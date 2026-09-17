@@ -1,8 +1,8 @@
-\# Parte teórica de la fase
+﻿\# Parte teÃ³rica de la fase
 
 
 
-\## Introducción
+\## IntroducciÃ³n
 
 
 
@@ -10,7 +10,7 @@ En esta fase se publica un servicio web alojado en la DMZ para permitir su acces
 
 
 
-El objetivo es comprender cómo se publican servicios internos de forma controlada mediante NAT y reglas de firewall.
+El objetivo es comprender cÃ³mo se publican servicios internos de forma controlada mediante NAT y reglas de firewall.
 
 
 
@@ -22,11 +22,11 @@ Para ello se utiliza un servidor Nginx ubicado en la DMZ.
 
 
 
-\## Publicación de servicios
+\## PublicaciÃ³n de servicios
 
 
 
-Publicar un servicio significa permitir que un sistema situado detrás de un firewall pueda recibir conexiones procedentes de otra red.
+Publicar un servicio significa permitir que un sistema situado detrÃ¡s de un firewall pueda recibir conexiones procedentes de otra red.
 
 
 
@@ -38,7 +38,7 @@ En este laboratorio se publica:
 
 \- Servidor: Nginx
 
-\- Ubicación: DMZ
+\- UbicaciÃ³n: DMZ
 
 \- Puerto: TCP/80
 
@@ -52,7 +52,7 @@ En este laboratorio se publica:
 
 
 
-NAT permite modificar las direcciones utilizadas en una comunicación entre redes.
+NAT permite modificar las direcciones utilizadas en una comunicaciÃ³n entre redes.
 
 
 
@@ -64,11 +64,11 @@ El Port Forwarding permite redirigir conexiones recibidas en un puerto hacia un 
 
 
 
-Cliente externo → Firewall → NAT → Servidor DMZ
+Cliente externo â†’ Firewall â†’ NAT â†’ Servidor DMZ
 
 
 
-Esto permite publicar únicamente los servicios necesarios sin exponer directamente toda la máquina.
+Esto permite publicar Ãºnicamente los servicios necesarios sin exponer directamente toda la mÃ¡quina.
 
 
 
@@ -90,11 +90,11 @@ Se utiliza en el laboratorio porque:
 
 \- es ligero
 
-\- está ampliamente utilizado
+\- estÃ¡ ampliamente utilizado
 
-\- permite generar tráfico HTTP real
+\- permite generar trÃ¡fico HTTP real
 
-\- facilita el análisis de logs
+\- facilita el anÃ¡lisis de logs
 
 
 
@@ -130,7 +130,7 @@ Permite comprobar el funcionamiento local del servidor web.
 
 
 
-También puede utilizarse:
+TambiÃ©n puede utilizarse:
 
 
 
@@ -150,13 +150,13 @@ para validar el acceso desde otro equipo.
 
 
 
-\- publicación controlada de servicios
+\- publicaciÃ³n controlada de servicios
 
 \- acceso externo a sistemas internos
 
-\- exposición innecesaria de puertos
+\- exposiciÃ³n innecesaria de puertos
 
-\- validación del flujo de tráfico
+\- validaciÃ³n del flujo de trÃ¡fico
 
 
 
@@ -176,7 +176,7 @@ para validar el acceso desde otro equipo.
 
 \- servicio Nginx detenido
 
-\- dirección IP incorrecta
+\- direcciÃ³n IP incorrecta
 
 
 
@@ -184,7 +184,7 @@ para validar el acceso desde otro equipo.
 
 
 
-\## Cómo detectar errores
+\## CÃ³mo detectar errores
 
 
 
@@ -204,7 +204,7 @@ para validar el acceso desde otro equipo.
 
 
 
-\## Cómo solucionarlos
+\## CÃ³mo solucionarlos
 
 
 
@@ -222,11 +222,11 @@ para validar el acceso desde otro equipo.
 
 
 
-\## Qué se aprende
+\## QuÃ© se aprende
 
 
 
-\- publicación de servicios
+\- publicaciÃ³n de servicios
 
 \- NAT
 
@@ -236,7 +236,7 @@ para validar el acceso desde otro equipo.
 
 \- funcionamiento de un servidor web
 
-\- análisis del flujo de red
+\- anÃ¡lisis del flujo de red
 
 
 
@@ -244,7 +244,7 @@ para validar el acceso desde otro equipo.
 
 
 
-\## Relación con el mundo real
+\## RelaciÃ³n con el mundo real
 
 
 

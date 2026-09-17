@@ -1,16 +1,16 @@
-\# Parte teórica de la fase
+﻿\# Parte teÃ³rica de la fase
 
 
 
-\## Introducción
+\## IntroducciÃ³n
 
 
 
-En esta fase se introduce la monitorización de seguridad mediante una máquina dedicada dentro del laboratorio.
+En esta fase se introduce la monitorizaciÃ³n de seguridad mediante una mÃ¡quina dedicada dentro del laboratorio.
 
 
 
-El objetivo es obtener visibilidad sobre la actividad de los sistemas y centralizar información relevante antes de implementar un SIEM completo.
+El objetivo es obtener visibilidad sobre la actividad de los sistemas y centralizar informaciÃ³n relevante antes de implementar un SIEM completo.
 
 
 
@@ -18,15 +18,15 @@ El objetivo es obtener visibilidad sobre la actividad de los sistemas y centrali
 
 
 
-\## Monitorización de seguridad
+\## MonitorizaciÃ³n de seguridad
 
 
 
-La monitorización permite observar la actividad de sistemas y redes para detectar errores, comportamientos anómalos o posibles incidentes.
+La monitorizaciÃ³n permite observar la actividad de sistemas y redes para detectar errores, comportamientos anÃ³malos o posibles incidentes.
 
 
 
-Las principales fuentes de información son:
+Las principales fuentes de informaciÃ³n son:
 
 
 
@@ -36,9 +36,9 @@ Las principales fuentes de información son:
 
 \- conexiones
 
-\- tráfico de red
+\- trÃ¡fico de red
 
-\- eventos de autenticación
+\- eventos de autenticaciÃ³n
 
 
 
@@ -54,7 +54,7 @@ Los logs son registros generados por sistemas y aplicaciones.
 
 
 
-Pueden contener información sobre:
+Pueden contener informaciÃ³n sobre:
 
 
 
@@ -70,7 +70,7 @@ Pueden contener información sobre:
 
 
 
-Su análisis es fundamental en operaciones de seguridad.
+Su anÃ¡lisis es fundamental en operaciones de seguridad.
 
 
 
@@ -90,7 +90,7 @@ Puede utilizarse para enviar registros desde diferentes equipos hacia un servido
 
 
 
-Esto facilita el análisis y evita depender exclusivamente de los logs almacenados localmente.
+Esto facilita el anÃ¡lisis y evita depender exclusivamente de los logs almacenados localmente.
 
 
 
@@ -102,7 +102,7 @@ Esto facilita el análisis y evita depender exclusivamente de los logs almacenad
 
 
 
-Tcpdump es una herramienta de captura de tráfico desde terminal.
+Tcpdump es una herramienta de captura de trÃ¡fico desde terminal.
 
 
 
@@ -114,7 +114,7 @@ Permite observar paquetes que atraviesan una interfaz de red.
 
 
 
-Es útil para troubleshooting y análisis de seguridad.
+Es Ãºtil para troubleshooting y anÃ¡lisis de seguridad.
 
 
 
@@ -122,7 +122,7 @@ Es útil para troubleshooting y análisis de seguridad.
 
 
 
-\## Monitorización de procesos y conexiones
+\## MonitorizaciÃ³n de procesos y conexiones
 
 
 
@@ -142,7 +142,7 @@ Herramientas del sistema permiten comprobar:
 
 
 
-Esta información permite comprender el comportamiento normal de un equipo.
+Esta informaciÃ³n permite comprender el comportamiento normal de un equipo.
 
 
 
@@ -150,11 +150,11 @@ Esta información permite comprender el comportamiento normal de un equipo.
 
 
 
-\## Centralización de logs
+\## CentralizaciÃ³n de logs
 
 
 
-Centralizar registros permite disponer de una visión común de diferentes sistemas.
+Centralizar registros permite disponer de una visiÃ³n comÃºn de diferentes sistemas.
 
 
 
@@ -184,9 +184,9 @@ Sus ventajas incluyen:
 
 \- falta de visibilidad
 
-\- dificultad de investigación
+\- dificultad de investigaciÃ³n
 
-\- ausencia de monitorización central
+\- ausencia de monitorizaciÃ³n central
 
 
 
@@ -202,7 +202,7 @@ Sus ventajas incluyen:
 
 \- puerto incorrecto
 
-\- configuración de cliente incorrecta
+\- configuraciÃ³n de cliente incorrecta
 
 \- problemas de conectividad
 
@@ -212,7 +212,7 @@ Sus ventajas incluyen:
 
 
 
-\## Cómo detectar errores
+\## CÃ³mo detectar errores
 
 
 
@@ -230,11 +230,11 @@ Sus ventajas incluyen:
 
 
 
-\## Cómo solucionarlos
+\## CÃ³mo solucionarlos
 
 
 
-\- revisar configuración de rsyslog
+\- revisar configuraciÃ³n de rsyslog
 
 \- comprobar firewall
 
@@ -248,19 +248,19 @@ Sus ventajas incluyen:
 
 
 
-\## Qué se aprende
+\## QuÃ© se aprende
 
 
 
-\- monitorización
+\- monitorizaciÃ³n
 
-\- análisis de logs
+\- anÃ¡lisis de logs
 
-\- centralización
+\- centralizaciÃ³n
 
-\- captura de tráfico
+\- captura de trÃ¡fico
 
-\- análisis básico de sistemas
+\- anÃ¡lisis bÃ¡sico de sistemas
 
 
 
@@ -268,9 +268,9 @@ Sus ventajas incluyen:
 
 
 
-\## Relación con el mundo real
+\## RelaciÃ³n con el mundo real
 
 
 
-La centralización y monitorización de logs constituye una de las bases de un SOC y permite posteriormente implementar soluciones SIEM más avanzadas.
+La centralizaciÃ³n y monitorizaciÃ³n de logs constituye una de las bases de un SOC y permite posteriormente implementar soluciones SIEM mÃ¡s avanzadas.
 

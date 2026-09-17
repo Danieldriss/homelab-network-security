@@ -1,12 +1,12 @@
-\# Parte teórica de la fase
+﻿\# Parte teÃ³rica de la fase
 
 
 
-\## Introducción
+\## IntroducciÃ³n
 
 
 
-En esta fase se refuerza la seguridad de la red mediante técnicas de network hardening aplicadas sobre OPNsense.
+En esta fase se refuerza la seguridad de la red mediante tÃ©cnicas de network hardening aplicadas sobre OPNsense.
 
 
 
@@ -22,7 +22,7 @@ El objetivo del hardening es reducir la superficie de ataque y eliminar configur
 
 
 
-El hardening consiste en reforzar la configuración de un sistema para reducir las posibilidades de compromiso.
+El hardening consiste en reforzar la configuraciÃ³n de un sistema para reducir las posibilidades de compromiso.
 
 
 
@@ -38,7 +38,7 @@ A nivel de red implica:
 
 \- proteger interfaces administrativas
 
-\- registrar tráfico bloqueado
+\- registrar trÃ¡fico bloqueado
 
 
 
@@ -46,15 +46,15 @@ A nivel de red implica:
 
 
 
-\## Principio de mínimo privilegio
+\## Principio de mÃ­nimo privilegio
 
 
 
-El principio de mínimo privilegio establece que únicamente debe permitirse el acceso estrictamente necesario.
+El principio de mÃ­nimo privilegio establece que Ãºnicamente debe permitirse el acceso estrictamente necesario.
 
 
 
-Aplicado a un firewall significa evitar reglas excesivamente amplias y permitir únicamente los servicios requeridos.
+Aplicado a un firewall significa evitar reglas excesivamente amplias y permitir Ãºnicamente los servicios requeridos.
 
 
 
@@ -76,13 +76,13 @@ En esta fase se revisan:
 
 \- acceso administrativo
 
-\- segmentación LAN/DMZ
+\- segmentaciÃ³n LAN/DMZ
 
 \- logs del firewall
 
 
 
-Antes de realizar cambios importantes también es recomendable realizar una copia de seguridad de la configuración.
+Antes de realizar cambios importantes tambiÃ©n es recomendable realizar una copia de seguridad de la configuraciÃ³n.
 
 
 
@@ -94,7 +94,7 @@ Antes de realizar cambios importantes también es recomendable realizar una copi
 
 
 
-Los logs permiten comprobar qué tráfico ha sido permitido o bloqueado.
+Los logs permiten comprobar quÃ© trÃ¡fico ha sido permitido o bloqueado.
 
 
 
@@ -122,7 +122,7 @@ Son importantes para:
 
 \- reglas demasiado permisivas
 
-\- exposición innecesaria
+\- exposiciÃ³n innecesaria
 
 \- movimiento lateral
 
@@ -140,9 +140,9 @@ Son importantes para:
 
 
 
-\- bloquear tráfico legítimo
+\- bloquear trÃ¡fico legÃ­timo
 
-\- permitir tráfico innecesario
+\- permitir trÃ¡fico innecesario
 
 \- configurar reglas en orden incorrecto
 
@@ -154,7 +154,7 @@ Son importantes para:
 
 
 
-\## Cómo detectar errores
+\## CÃ³mo detectar errores
 
 
 
@@ -164,7 +164,7 @@ Son importantes para:
 
 \- realizar pruebas de conectividad
 
-\- validar servicios después de los cambios
+\- validar servicios despuÃ©s de los cambios
 
 
 
@@ -172,13 +172,13 @@ Son importantes para:
 
 
 
-\## Cómo solucionarlos
+\## CÃ³mo solucionarlos
 
 
 
 \- revisar origen y destino
 
-\- aplicar mínimo privilegio
+\- aplicar mÃ­nimo privilegio
 
 \- restaurar configuraciones si es necesario
 
@@ -190,19 +190,19 @@ Son importantes para:
 
 
 
-\## Qué se aprende
+\## QuÃ© se aprende
 
 
 
 \- network hardening
 
-\- mínimo privilegio
+\- mÃ­nimo privilegio
 
-\- gestión segura de firewall
+\- gestiÃ³n segura de firewall
 
-\- análisis de logs
+\- anÃ¡lisis de logs
 
-\- validación de políticas de seguridad
+\- validaciÃ³n de polÃ­ticas de seguridad
 
 
 
@@ -210,9 +210,9 @@ Son importantes para:
 
 
 
-\## Relación con el mundo real
+\## RelaciÃ³n con el mundo real
 
 
 
-El hardening de firewalls es una tarea habitual en entornos empresariales para reducir la exposición de la infraestructura y limitar comunicaciones innecesarias.
+El hardening de firewalls es una tarea habitual en entornos empresariales para reducir la exposiciÃ³n de la infraestructura y limitar comunicaciones innecesarias.
 

@@ -1,8 +1,8 @@
-\# Parte teórica de la fase
+﻿\# Parte teÃ³rica de la fase
 
 
 
-\## Introducción
+\## IntroducciÃ³n
 
 
 
@@ -10,7 +10,7 @@ En esta fase se despliegan agentes Wazuh en los sistemas Linux del laboratorio.
 
 
 
-El objetivo es conectar los endpoints con el SIEM para que puedan enviar información de seguridad al servidor central.
+El objetivo es conectar los endpoints con el SIEM para que puedan enviar informaciÃ³n de seguridad al servidor central.
 
 
 
@@ -22,7 +22,7 @@ El objetivo es conectar los endpoints con el SIEM para que puedan enviar informa
 
 
 
-Un agente Wazuh es un componente instalado en un endpoint que recopila información relevante del sistema.
+Un agente Wazuh es un componente instalado en un endpoint que recopila informaciÃ³n relevante del sistema.
 
 
 
@@ -42,13 +42,13 @@ La arquitectura funciona mediante dos elementos principales:
 
 
 
-\- Wazuh Manager → recibe y analiza información
+\- Wazuh Manager â†’ recibe y analiza informaciÃ³n
 
-\- Wazuh Agent → recopila información del endpoint
+\- Wazuh Agent â†’ recopila informaciÃ³n del endpoint
 
 
 
-Este modelo permite gestionar múltiples sistemas desde una plataforma central.
+Este modelo permite gestionar mÃºltiples sistemas desde una plataforma central.
 
 
 
@@ -56,11 +56,11 @@ Este modelo permite gestionar múltiples sistemas desde una plataforma central.
 
 
 
-\## Monitorización de endpoints
+\## MonitorizaciÃ³n de endpoints
 
 
 
-Los agentes permiten obtener información relacionada con:
+Los agentes permiten obtener informaciÃ³n relacionada con:
 
 
 
@@ -72,7 +72,7 @@ Los agentes permiten obtener información relacionada con:
 
 \- cambios relevantes
 
-\- configuración de seguridad
+\- configuraciÃ³n de seguridad
 
 
 
@@ -84,11 +84,11 @@ Esto aumenta considerablemente la visibilidad sobre los endpoints.
 
 
 
-\## Comunicación entre redes
+\## ComunicaciÃ³n entre redes
 
 
 
-Cuando un agente y el servidor Wazuh se encuentran en redes diferentes, las reglas de segmentación pueden afectar a la comunicación.
+Cuando un agente y el servidor Wazuh se encuentran en redes diferentes, las reglas de segmentaciÃ³n pueden afectar a la comunicaciÃ³n.
 
 
 
@@ -120,7 +120,7 @@ Un agente correctamente conectado debe aparecer como activo en el dashboard de W
 
 
 
-Esto permite verificar que existe comunicación entre el endpoint y el SIEM.
+Esto permite verificar que existe comunicaciÃ³n entre el endpoint y el SIEM.
 
 
 
@@ -134,11 +134,11 @@ Esto permite verificar que existe comunicación entre el endpoint y el SIEM.
 
 \- falta de visibilidad de endpoints
 
-\- logs únicamente locales
+\- logs Ãºnicamente locales
 
 \- dificultad para monitorizar varios sistemas
 
-\- ausencia de recopilación centralizada
+\- ausencia de recopilaciÃ³n centralizada
 
 
 
@@ -150,11 +150,11 @@ Esto permite verificar que existe comunicación entre el endpoint y el SIEM.
 
 
 
-\- dirección del manager incorrecta
+\- direcciÃ³n del manager incorrecta
 
 \- agente detenido
 
-\- firewall bloqueando comunicación
+\- firewall bloqueando comunicaciÃ³n
 
 \- problemas de routing
 
@@ -166,7 +166,7 @@ Esto permite verificar que existe comunicación entre el endpoint y el SIEM.
 
 
 
-\## Cómo detectar errores
+\## CÃ³mo detectar errores
 
 
 
@@ -186,13 +186,13 @@ Esto permite verificar que existe comunicación entre el endpoint y el SIEM.
 
 
 
-\## Cómo solucionarlos
+\## CÃ³mo solucionarlos
 
 
 
 \- verificar la IP del manager
 
-\- revisar segmentación
+\- revisar segmentaciÃ³n
 
 \- comprobar reglas del firewall
 
@@ -206,19 +206,19 @@ Esto permite verificar que existe comunicación entre el endpoint y el SIEM.
 
 
 
-\## Qué se aprende
+\## QuÃ© se aprende
 
 
 
 \- despliegue de agentes
 
-\- monitorización de endpoints
+\- monitorizaciÃ³n de endpoints
 
 \- arquitectura agente-servidor
 
 \- troubleshooting de red
 
-\- integración con SIEM
+\- integraciÃ³n con SIEM
 
 
 
@@ -226,9 +226,9 @@ Esto permite verificar que existe comunicación entre el endpoint y el SIEM.
 
 
 
-\## Relación con el mundo real
+\## RelaciÃ³n con el mundo real
 
 
 
-Los agentes instalados en endpoints permiten a los equipos SOC recopilar información de numerosos sistemas y analizarla desde una plataforma centralizada.
+Los agentes instalados en endpoints permiten a los equipos SOC recopilar informaciÃ³n de numerosos sistemas y analizarla desde una plataforma centralizada.
 

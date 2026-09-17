@@ -1,8 +1,8 @@
-\# Parte teórica de la fase
+﻿\# Parte teÃ³rica de la fase
 
 
 
-\## Introducción
+\## IntroducciÃ³n
 
 
 
@@ -10,7 +10,7 @@ En esta fase se despliega Wazuh como plataforma SIEM dentro del laboratorio.
 
 
 
-El objetivo es evolucionar desde la monitorización básica y centralización de logs hacia una plataforma especializada en detección y análisis de eventos de seguridad.
+El objetivo es evolucionar desde la monitorizaciÃ³n bÃ¡sica y centralizaciÃ³n de logs hacia una plataforma especializada en detecciÃ³n y anÃ¡lisis de eventos de seguridad.
 
 
 
@@ -18,7 +18,7 @@ El objetivo es evolucionar desde la monitorización básica y centralización de
 
 
 
-\## ¿Qué es un SIEM?
+\## Â¿QuÃ© es un SIEM?
 
 
 
@@ -32,7 +32,7 @@ Un SIEM permite:
 
 \- recopilar eventos
 
-\- centralizar información
+\- centralizar informaciÃ³n
 
 \- analizar logs
 
@@ -50,7 +50,7 @@ Un SIEM permite:
 
 
 
-Wazuh es una plataforma de seguridad open source orientada a la monitorización y detección de amenazas.
+Wazuh es una plataforma de seguridad open source orientada a la monitorizaciÃ³n y detecciÃ³n de amenazas.
 
 
 
@@ -66,11 +66,11 @@ Permite integrar diferentes endpoints y analizar eventos desde una interfaz cent
 
 
 
-Una implementación de Wazuh incluye componentes encargados de:
+Una implementaciÃ³n de Wazuh incluye componentes encargados de:
 
 
 
-\- recibir información
+\- recibir informaciÃ³n
 
 \- procesar eventos
 
@@ -80,7 +80,7 @@ Una implementación de Wazuh incluye componentes encargados de:
 
 
 
-El dashboard proporciona una interfaz gráfica para consultar la información recopilada.
+El dashboard proporciona una interfaz grÃ¡fica para consultar la informaciÃ³n recopilada.
 
 
 
@@ -92,11 +92,11 @@ El dashboard proporciona una interfaz gráfica para consultar la información re
 
 
 
-En el laboratorio se utiliza una máquina dedicada como servidor Wazuh.
+En el laboratorio se utiliza una mÃ¡quina dedicada como servidor Wazuh.
 
 
 
-Los sistemas monitorizados envían sus eventos hacia este servidor.
+Los sistemas monitorizados envÃ­an sus eventos hacia este servidor.
 
 
 
@@ -128,7 +128,7 @@ Permite investigar:
 
 \- alertas de seguridad
 
-\- eventos procedentes de múltiples equipos
+\- eventos procedentes de mÃºltiples equipos
 
 
 
@@ -140,13 +140,13 @@ Permite investigar:
 
 
 
-\- información distribuida
+\- informaciÃ³n distribuida
 
 \- dificultad para correlacionar eventos
 
 \- falta de visibilidad centralizada
 
-\- análisis manual de múltiples equipos
+\- anÃ¡lisis manual de mÃºltiples equipos
 
 
 
@@ -166,7 +166,7 @@ Permite investigar:
 
 \- servicios del SIEM detenidos
 
-\- configuración incorrecta
+\- configuraciÃ³n incorrecta
 
 
 
@@ -174,7 +174,7 @@ Permite investigar:
 
 
 
-\## Cómo detectar errores
+\## CÃ³mo detectar errores
 
 
 
@@ -194,7 +194,7 @@ Permite investigar:
 
 
 
-\## Cómo solucionarlos
+\## CÃ³mo solucionarlos
 
 
 
@@ -206,7 +206,7 @@ Permite investigar:
 
 \- reiniciar servicios
 
-\- comprobar configuración
+\- comprobar configuraciÃ³n
 
 
 
@@ -214,7 +214,7 @@ Permite investigar:
 
 
 
-\## Qué se aprende
+\## QuÃ© se aprende
 
 
 
@@ -222,7 +222,7 @@ Permite investigar:
 
 \- arquitectura SOC
 
-\- centralización de eventos
+\- centralizaciÃ³n de eventos
 
 \- Wazuh
 
@@ -234,7 +234,7 @@ Permite investigar:
 
 
 
-\## Relación con el mundo real
+\## RelaciÃ³n con el mundo real
 
 
 
