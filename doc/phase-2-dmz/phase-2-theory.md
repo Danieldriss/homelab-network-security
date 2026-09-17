@@ -1,36 +1,36 @@
-﻿\# Parte teÃ³rica de la fase
+﻿# Parte teórica de la fase
 
 
 
-\## IntroducciÃ³n
+## Introducción
 
 
 
-En esta fase se amplÃ­a la arquitectura del laboratorio mediante la creaciÃ³n de una zona desmilitarizada o DMZ.
+En esta fase se amplía la arquitectura del laboratorio mediante la creación de una zona desmilitarizada o DMZ.
 
 
 
-El objetivo es separar los sistemas expuestos de la red interna, creando diferentes niveles de confianza y controlando la comunicaciÃ³n entre ellos mediante el firewall.
+El objetivo es separar los sistemas expuestos de la red interna, creando diferentes niveles de confianza y controlando la comunicación entre ellos mediante el firewall.
 
 
 
-La segmentaciÃ³n de red es una medida fundamental de seguridad, ya que permite limitar el alcance de un posible compromiso.
+La segmentación de red es una medida fundamental de seguridad, ya que permite limitar el alcance de un posible compromiso.
 
 
 
-\---
+---
 
 
 
-\## Concepto de DMZ
+## Concepto de DMZ
 
 
 
-Una DMZ es una red intermedia utilizada para alojar sistemas o servicios que necesitan estar mÃ¡s expuestos que los equipos de la red interna.
+Una DMZ es una red intermedia utilizada para alojar sistemas o servicios que necesitan estar más expuestos que los equipos de la red interna.
 
 
 
-\### Â¿Por quÃ© utilizar una DMZ?
+### ¿Por qué utilizar una DMZ?
 
 
 
@@ -38,21 +38,21 @@ Permite:
 
 
 
-\- separar servicios expuestos de la LAN
+- separar servicios expuestos de la LAN
 
-\- reducir el movimiento lateral
+- reducir el movimiento lateral
 
-\- aplicar reglas especÃ­ficas de firewall
+- aplicar reglas específicas de firewall
 
-\- limitar el impacto de un sistema comprometido
-
-
-
-\---
+- limitar el impacto de un sistema comprometido
 
 
 
-\## SegmentaciÃ³n mediante OPNsense
+---
+
+
+
+## Segmentación mediante OPNsense
 
 
 
@@ -64,27 +64,27 @@ En el laboratorio se utilizan:
 
 
 
-\- WAN â†’ conexiÃ³n externa
+- WAN → conexión externa
 
-\- LAN â†’ red interna
+- LAN → red interna
 
-\- OPT1/DMZ â†’ red de servicios expuestos
-
-
-
-El firewall controla quÃ© trÃ¡fico puede circular entre estas redes.
+- OPT1/DMZ → red de servicios expuestos
 
 
 
-\---
+El firewall controla qué tráfico puede circular entre estas redes.
 
 
 
-\## Reglas de firewall
+---
 
 
 
-Las reglas permiten definir quÃ© comunicaciones estÃ¡n autorizadas o bloqueadas.
+## Reglas de firewall
+
+
+
+Las reglas permiten definir qué comunicaciones están autorizadas o bloqueadas.
 
 
 
@@ -92,25 +92,25 @@ En esta fase se aplica principalmente:
 
 
 
-\- DMZ â†’ LAN: bloqueado
+- DMZ → LAN: bloqueado
 
-\- DMZ â†’ Internet: permitido
-
-
-
-El orden de las reglas es importante, ya que el firewall evalÃºa el trÃ¡fico segÃºn las polÃ­ticas configuradas.
+- DMZ → Internet: permitido
 
 
 
-\---
+El orden de las reglas es importante, ya que el firewall evalúa el tráfico según las políticas configuradas.
 
 
 
-\## Comandos utilizados
+---
 
 
 
-\### ip a
+## Comandos utilizados
+
+
+
+### ip a
 
 
 
@@ -118,11 +118,11 @@ El orden de las reglas es importante, ya que el firewall evalÃºa el trÃ¡fico
 
 
 
-Permite comprobar la direcciÃ³n IP asignada a la mÃ¡quina de la DMZ.
+Permite comprobar la dirección IP asignada a la máquina de la DMZ.
 
 
 
-\### ping
+### ping
 
 
 
@@ -138,105 +138,105 @@ Se utiliza para verificar que la DMZ puede acceder a Internet pero no puede alca
 
 
 
-\---
+---
 
 
 
-\## Problemas que se resuelven
+## Problemas que se resuelven
 
 
 
-\- redes sin segmentaciÃ³n
+- redes sin segmentación
 
-\- acceso innecesario entre sistemas
+- acceso innecesario entre sistemas
 
-\- movimiento lateral
+- movimiento lateral
 
-\- exposiciÃ³n de la red interna
+- exposición de la red interna
 
 
 
-\---
+---
 
 
 
-\## Errores comunes
+## Errores comunes
 
 
 
-\- reglas de firewall en orden incorrecto
+- reglas de firewall en orden incorrecto
 
-\- interfaz OPT1 mal configurada
+- interfaz OPT1 mal configurada
 
-\- gateway incorrecto
+- gateway incorrecto
 
-\- reglas demasiado permisivas
+- reglas demasiado permisivas
 
 
 
-\---
+---
 
 
 
-\## CÃ³mo detectar errores
+## Cómo detectar errores
 
 
 
-\- comprobar conectividad mediante ping
+- comprobar conectividad mediante ping
 
-\- revisar las reglas de OPNsense
+- revisar las reglas de OPNsense
 
-\- consultar los logs del firewall
+- consultar los logs del firewall
 
-\- verificar las direcciones IP
+- verificar las direcciones IP
 
 
 
-\---
+---
 
 
 
-\## CÃ³mo solucionarlos
+## Cómo solucionarlos
 
 
 
-\- revisar la configuraciÃ³n de interfaces
+- revisar la configuración de interfaces
 
-\- comprobar el orden de las reglas
+- comprobar el orden de las reglas
 
-\- verificar origen y destino de cada regla
+- verificar origen y destino de cada regla
 
-\- revisar gateway y direccionamiento
+- revisar gateway y direccionamiento
 
 
 
-\---
+---
 
 
 
-\## QuÃ© se aprende
+## Qué se aprende
 
 
 
-\- concepto de DMZ
+- concepto de DMZ
 
-\- segmentaciÃ³n de red
+- segmentación de red
 
-\- reglas de firewall
+- reglas de firewall
 
-\- control de trÃ¡fico
+- control de tráfico
 
-\- principio de mÃ­nimo privilegio
+- principio de mínimo privilegio
 
 
 
-\---
+---
 
 
 
-\## RelaciÃ³n con el mundo real
+## Relación con el mundo real
 
 
 
-Las DMZ se utilizan en infraestructuras empresariales para separar servicios potencialmente expuestos de los sistemas internos de la organizaciÃ³n.
+Las DMZ se utilizan en infraestructuras empresariales para separar servicios potencialmente expuestos de los sistemas internos de la organización.
 

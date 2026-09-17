@@ -1,8 +1,8 @@
-﻿\# Parte teÃ³rica de la fase
+﻿# Parte teórica de la fase
 
 
 
-\## IntroducciÃ³n
+## Introducción
 
 
 
@@ -10,7 +10,7 @@ En esta fase se publica un servicio web alojado en la DMZ para permitir su acces
 
 
 
-El objetivo es comprender cÃ³mo se publican servicios internos de forma controlada mediante NAT y reglas de firewall.
+El objetivo es comprender cómo se publican servicios internos de forma controlada mediante NAT y reglas de firewall.
 
 
 
@@ -18,15 +18,15 @@ Para ello se utiliza un servidor Nginx ubicado en la DMZ.
 
 
 
-\---
+---
 
 
 
-\## PublicaciÃ³n de servicios
+## Publicación de servicios
 
 
 
-Publicar un servicio significa permitir que un sistema situado detrÃ¡s de un firewall pueda recibir conexiones procedentes de otra red.
+Publicar un servicio significa permitir que un sistema situado detrás de un firewall pueda recibir conexiones procedentes de otra red.
 
 
 
@@ -34,25 +34,25 @@ En este laboratorio se publica:
 
 
 
-\- Servicio: HTTP
+- Servicio: HTTP
 
-\- Servidor: Nginx
+- Servidor: Nginx
 
-\- UbicaciÃ³n: DMZ
+- Ubicación: DMZ
 
-\- Puerto: TCP/80
-
-
-
-\---
+- Puerto: TCP/80
 
 
 
-\## NAT y Port Forwarding
+---
 
 
 
-NAT permite modificar las direcciones utilizadas en una comunicaciÃ³n entre redes.
+## NAT y Port Forwarding
+
+
+
+NAT permite modificar las direcciones utilizadas en una comunicación entre redes.
 
 
 
@@ -60,23 +60,23 @@ El Port Forwarding permite redirigir conexiones recibidas en un puerto hacia un 
 
 
 
-\### Flujo simplificado
+### Flujo simplificado
 
 
 
-Cliente externo â†’ Firewall â†’ NAT â†’ Servidor DMZ
+Cliente externo → Firewall → NAT → Servidor DMZ
 
 
 
-Esto permite publicar Ãºnicamente los servicios necesarios sin exponer directamente toda la mÃ¡quina.
+Esto permite publicar únicamente los servicios necesarios sin exponer directamente toda la máquina.
 
 
 
-\---
+---
 
 
 
-\## Nginx
+## Nginx
 
 
 
@@ -88,25 +88,25 @@ Se utiliza en el laboratorio porque:
 
 
 
-\- es ligero
+- es ligero
 
-\- estÃ¡ ampliamente utilizado
+- está ampliamente utilizado
 
-\- permite generar trÃ¡fico HTTP real
+- permite generar tráfico HTTP real
 
-\- facilita el anÃ¡lisis de logs
-
-
-
-\---
+- facilita el análisis de logs
 
 
 
-\## Comandos utilizados
+---
 
 
 
-\### systemctl
+## Comandos utilizados
+
+
+
+### systemctl
 
 
 
@@ -118,7 +118,7 @@ Permite comprobar si el servicio Nginx se encuentra activo.
 
 
 
-\### curl
+### curl
 
 
 
@@ -130,7 +130,7 @@ Permite comprobar el funcionamiento local del servidor web.
 
 
 
-TambiÃ©n puede utilizarse:
+También puede utilizarse:
 
 
 
@@ -142,109 +142,109 @@ para validar el acceso desde otro equipo.
 
 
 
-\---
+---
 
 
 
-\## Problemas que se resuelven
+## Problemas que se resuelven
 
 
 
-\- publicaciÃ³n controlada de servicios
+- publicación controlada de servicios
 
-\- acceso externo a sistemas internos
+- acceso externo a sistemas internos
 
-\- exposiciÃ³n innecesaria de puertos
+- exposición innecesaria de puertos
 
-\- validaciÃ³n del flujo de trÃ¡fico
+- validación del flujo de tráfico
 
 
 
-\---
+---
 
 
 
-\## Errores comunes
+## Errores comunes
 
 
 
-\- NAT mal configurado
+- NAT mal configurado
 
-\- puerto incorrecto
+- puerto incorrecto
 
-\- regla WAN inexistente
+- regla WAN inexistente
 
-\- servicio Nginx detenido
+- servicio Nginx detenido
 
-\- direcciÃ³n IP incorrecta
+- dirección IP incorrecta
 
 
 
-\---
+---
 
 
 
-\## CÃ³mo detectar errores
+## Cómo detectar errores
 
 
 
-\- comprobar Nginx con systemctl
+- comprobar Nginx con systemctl
 
-\- probar el servicio con curl
+- probar el servicio con curl
 
-\- revisar reglas NAT
+- revisar reglas NAT
 
-\- consultar logs del firewall
+- consultar logs del firewall
 
-\- revisar logs de Nginx
+- revisar logs de Nginx
 
 
 
-\---
+---
 
 
 
-\## CÃ³mo solucionarlos
+## Cómo solucionarlos
 
 
 
-\- verificar la IP del servidor
+- verificar la IP del servidor
 
-\- comprobar el puerto publicado
+- comprobar el puerto publicado
 
-\- revisar las reglas del firewall
+- revisar las reglas del firewall
 
-\- comprobar el servicio web
+- comprobar el servicio web
 
 
 
-\---
+---
 
 
 
-\## QuÃ© se aprende
+## Qué se aprende
 
 
 
-\- publicaciÃ³n de servicios
+- publicación de servicios
 
-\- NAT
+- NAT
 
-\- Port Forwarding
+- Port Forwarding
 
-\- HTTP
+- HTTP
 
-\- funcionamiento de un servidor web
+- funcionamiento de un servidor web
 
-\- anÃ¡lisis del flujo de red
+- análisis del flujo de red
 
 
 
-\---
+---
 
 
 
-\## RelaciÃ³n con el mundo real
+## Relación con el mundo real
 
 
 

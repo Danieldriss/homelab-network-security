@@ -1,12 +1,12 @@
-﻿\# Parte teÃ³rica de la fase
+﻿# Parte teórica de la fase
 
 
 
-\## IntroducciÃ³n
+## Introducción
 
 
 
-En esta fase se refuerza la seguridad de la red mediante tÃ©cnicas de network hardening aplicadas sobre OPNsense.
+En esta fase se refuerza la seguridad de la red mediante técnicas de network hardening aplicadas sobre OPNsense.
 
 
 
@@ -14,15 +14,15 @@ El objetivo del hardening es reducir la superficie de ataque y eliminar configur
 
 
 
-\---
+---
 
 
 
-\## Network Hardening
+## Network Hardening
 
 
 
-El hardening consiste en reforzar la configuraciÃ³n de un sistema para reducir las posibilidades de compromiso.
+El hardening consiste en reforzar la configuración de un sistema para reducir las posibilidades de compromiso.
 
 
 
@@ -30,39 +30,39 @@ A nivel de red implica:
 
 
 
-\- restringir comunicaciones
+- restringir comunicaciones
 
-\- cerrar accesos innecesarios
+- cerrar accesos innecesarios
 
-\- revisar reglas de firewall
+- revisar reglas de firewall
 
-\- proteger interfaces administrativas
+- proteger interfaces administrativas
 
-\- registrar trÃ¡fico bloqueado
-
-
-
-\---
+- registrar tráfico bloqueado
 
 
 
-\## Principio de mÃ­nimo privilegio
+---
 
 
 
-El principio de mÃ­nimo privilegio establece que Ãºnicamente debe permitirse el acceso estrictamente necesario.
+## Principio de mínimo privilegio
 
 
 
-Aplicado a un firewall significa evitar reglas excesivamente amplias y permitir Ãºnicamente los servicios requeridos.
+El principio de mínimo privilegio establece que únicamente debe permitirse el acceso estrictamente necesario.
 
 
 
-\---
+Aplicado a un firewall significa evitar reglas excesivamente amplias y permitir únicamente los servicios requeridos.
 
 
 
-\## Hardening de OPNsense
+---
+
+
+
+## Hardening de OPNsense
 
 
 
@@ -70,31 +70,31 @@ En esta fase se revisan:
 
 
 
-\- reglas WAN
+- reglas WAN
 
-\- reglas de DMZ
+- reglas de DMZ
 
-\- acceso administrativo
+- acceso administrativo
 
-\- segmentaciÃ³n LAN/DMZ
+- segmentación LAN/DMZ
 
-\- logs del firewall
-
-
-
-Antes de realizar cambios importantes tambiÃ©n es recomendable realizar una copia de seguridad de la configuraciÃ³n.
+- logs del firewall
 
 
 
-\---
+Antes de realizar cambios importantes también es recomendable realizar una copia de seguridad de la configuración.
 
 
 
-\## Logs de firewall
+---
 
 
 
-Los logs permiten comprobar quÃ© trÃ¡fico ha sido permitido o bloqueado.
+## Logs de firewall
+
+
+
+Los logs permiten comprobar qué tráfico ha sido permitido o bloqueado.
 
 
 
@@ -102,117 +102,117 @@ Son importantes para:
 
 
 
-\- detectar errores
+- detectar errores
 
-\- investigar conexiones
+- investigar conexiones
 
-\- validar reglas
+- validar reglas
 
-\- analizar actividad sospechosa
+- analizar actividad sospechosa
 
 
 
-\---
+---
 
 
 
-\## Problemas que se resuelven
+## Problemas que se resuelven
 
 
 
-\- reglas demasiado permisivas
+- reglas demasiado permisivas
 
-\- exposiciÃ³n innecesaria
+- exposición innecesaria
 
-\- movimiento lateral
+- movimiento lateral
 
-\- falta de visibilidad
+- falta de visibilidad
 
-\- configuraciones inseguras
+- configuraciones inseguras
 
 
 
-\---
+---
 
 
 
-\## Errores comunes
+## Errores comunes
 
 
 
-\- bloquear trÃ¡fico legÃ­timo
+- bloquear tráfico legítimo
 
-\- permitir trÃ¡fico innecesario
+- permitir tráfico innecesario
 
-\- configurar reglas en orden incorrecto
+- configurar reglas en orden incorrecto
 
-\- modificar el firewall sin realizar backup
+- modificar el firewall sin realizar backup
 
 
 
-\---
+---
 
 
 
-\## CÃ³mo detectar errores
+## Cómo detectar errores
 
 
 
-\- revisar logs
+- revisar logs
 
-\- comprobar reglas
+- comprobar reglas
 
-\- realizar pruebas de conectividad
+- realizar pruebas de conectividad
 
-\- validar servicios despuÃ©s de los cambios
+- validar servicios después de los cambios
 
 
 
-\---
+---
 
 
 
-\## CÃ³mo solucionarlos
+## Cómo solucionarlos
 
 
 
-\- revisar origen y destino
+- revisar origen y destino
 
-\- aplicar mÃ­nimo privilegio
+- aplicar mínimo privilegio
 
-\- restaurar configuraciones si es necesario
+- restaurar configuraciones si es necesario
 
-\- comprobar las reglas una por una
+- comprobar las reglas una por una
 
 
 
-\---
+---
 
 
 
-\## QuÃ© se aprende
+## Qué se aprende
 
 
 
-\- network hardening
+- network hardening
 
-\- mÃ­nimo privilegio
+- mínimo privilegio
 
-\- gestiÃ³n segura de firewall
+- gestión segura de firewall
 
-\- anÃ¡lisis de logs
+- análisis de logs
 
-\- validaciÃ³n de polÃ­ticas de seguridad
+- validación de políticas de seguridad
 
 
 
-\---
+---
 
 
 
-\## RelaciÃ³n con el mundo real
+## Relación con el mundo real
 
 
 
-El hardening de firewalls es una tarea habitual en entornos empresariales para reducir la exposiciÃ³n de la infraestructura y limitar comunicaciones innecesarias.
+El hardening de firewalls es una tarea habitual en entornos empresariales para reducir la exposición de la infraestructura y limitar comunicaciones innecesarias.
 

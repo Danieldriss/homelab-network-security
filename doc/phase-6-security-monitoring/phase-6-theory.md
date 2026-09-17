@@ -1,52 +1,52 @@
-﻿\# Parte teÃ³rica de la fase
+﻿# Parte teórica de la fase
 
 
 
-\## IntroducciÃ³n
+## Introducción
 
 
 
-En esta fase se introduce la monitorizaciÃ³n de seguridad mediante una mÃ¡quina dedicada dentro del laboratorio.
+En esta fase se introduce la monitorización de seguridad mediante una máquina dedicada dentro del laboratorio.
 
 
 
-El objetivo es obtener visibilidad sobre la actividad de los sistemas y centralizar informaciÃ³n relevante antes de implementar un SIEM completo.
+El objetivo es obtener visibilidad sobre la actividad de los sistemas y centralizar información relevante antes de implementar un SIEM completo.
 
 
 
-\---
+---
 
 
 
-\## MonitorizaciÃ³n de seguridad
+## Monitorización de seguridad
 
 
 
-La monitorizaciÃ³n permite observar la actividad de sistemas y redes para detectar errores, comportamientos anÃ³malos o posibles incidentes.
+La monitorización permite observar la actividad de sistemas y redes para detectar errores, comportamientos anómalos o posibles incidentes.
 
 
 
-Las principales fuentes de informaciÃ³n son:
+Las principales fuentes de información son:
 
 
 
-\- logs
+- logs
 
-\- procesos
+- procesos
 
-\- conexiones
+- conexiones
 
-\- trÃ¡fico de red
+- tráfico de red
 
-\- eventos de autenticaciÃ³n
-
-
-
-\---
+- eventos de autenticación
 
 
 
-\## Logs
+---
+
+
+
+## Logs
 
 
 
@@ -54,31 +54,31 @@ Los logs son registros generados por sistemas y aplicaciones.
 
 
 
-Pueden contener informaciÃ³n sobre:
+Pueden contener información sobre:
 
 
 
-\- autenticaciones
+- autenticaciones
 
-\- errores
+- errores
 
-\- servicios
+- servicios
 
-\- conexiones
+- conexiones
 
-\- acciones del sistema
-
-
-
-Su anÃ¡lisis es fundamental en operaciones de seguridad.
+- acciones del sistema
 
 
 
-\---
+Su análisis es fundamental en operaciones de seguridad.
 
 
 
-\## Rsyslog
+---
+
+
+
+## Rsyslog
 
 
 
@@ -90,19 +90,19 @@ Puede utilizarse para enviar registros desde diferentes equipos hacia un servido
 
 
 
-Esto facilita el anÃ¡lisis y evita depender exclusivamente de los logs almacenados localmente.
+Esto facilita el análisis y evita depender exclusivamente de los logs almacenados localmente.
 
 
 
-\---
+---
 
 
 
-\## Tcpdump
+## Tcpdump
 
 
 
-Tcpdump es una herramienta de captura de trÃ¡fico desde terminal.
+Tcpdump es una herramienta de captura de tráfico desde terminal.
 
 
 
@@ -114,15 +114,15 @@ Permite observar paquetes que atraviesan una interfaz de red.
 
 
 
-Es Ãºtil para troubleshooting y anÃ¡lisis de seguridad.
+Es útil para troubleshooting y análisis de seguridad.
 
 
 
-\---
+---
 
 
 
-\## MonitorizaciÃ³n de procesos y conexiones
+## Monitorización de procesos y conexiones
 
 
 
@@ -130,31 +130,31 @@ Herramientas del sistema permiten comprobar:
 
 
 
-\- procesos activos
+- procesos activos
 
-\- servicios
+- servicios
 
-\- interfaces
+- interfaces
 
-\- puertos
+- puertos
 
-\- conexiones establecidas
-
-
-
-Esta informaciÃ³n permite comprender el comportamiento normal de un equipo.
+- conexiones establecidas
 
 
 
-\---
+Esta información permite comprender el comportamiento normal de un equipo.
 
 
 
-\## CentralizaciÃ³n de logs
+---
 
 
 
-Centralizar registros permite disponer de una visiÃ³n comÃºn de diferentes sistemas.
+## Centralización de logs
+
+
+
+Centralizar registros permite disponer de una visión común de diferentes sistemas.
 
 
 
@@ -162,115 +162,115 @@ Sus ventajas incluyen:
 
 
 
-\- facilitar investigaciones
+- facilitar investigaciones
 
-\- mejorar la visibilidad
+- mejorar la visibilidad
 
-\- conservar evidencias
+- conservar evidencias
 
-\- detectar patrones entre diferentes hosts
+- detectar patrones entre diferentes hosts
 
 
 
-\---
+---
 
 
 
-\## Problemas que se resuelven
+## Problemas que se resuelven
 
 
 
-\- logs dispersos
+- logs dispersos
 
-\- falta de visibilidad
+- falta de visibilidad
 
-\- dificultad de investigaciÃ³n
+- dificultad de investigación
 
-\- ausencia de monitorizaciÃ³n central
+- ausencia de monitorización central
 
 
 
-\---
+---
 
 
 
-\## Errores comunes
+## Errores comunes
 
 
 
-\- servicio rsyslog detenido
+- servicio rsyslog detenido
 
-\- puerto incorrecto
+- puerto incorrecto
 
-\- configuraciÃ³n de cliente incorrecta
+- configuración de cliente incorrecta
 
-\- problemas de conectividad
+- problemas de conectividad
 
 
 
-\---
+---
 
 
 
-\## CÃ³mo detectar errores
+## Cómo detectar errores
 
 
 
-\- comprobar servicios
+- comprobar servicios
 
-\- verificar puertos
+- verificar puertos
 
-\- revisar logs locales
+- revisar logs locales
 
-\- realizar pruebas de conectividad
+- realizar pruebas de conectividad
 
 
 
-\---
+---
 
 
 
-\## CÃ³mo solucionarlos
+## Cómo solucionarlos
 
 
 
-\- revisar configuraciÃ³n de rsyslog
+- revisar configuración de rsyslog
 
-\- comprobar firewall
+- comprobar firewall
 
-\- validar conectividad
+- validar conectividad
 
-\- reiniciar servicios cuando sea necesario
+- reiniciar servicios cuando sea necesario
 
 
 
-\---
+---
 
 
 
-\## QuÃ© se aprende
+## Qué se aprende
 
 
 
-\- monitorizaciÃ³n
+- monitorización
 
-\- anÃ¡lisis de logs
+- análisis de logs
 
-\- centralizaciÃ³n
+- centralización
 
-\- captura de trÃ¡fico
+- captura de tráfico
 
-\- anÃ¡lisis bÃ¡sico de sistemas
+- análisis básico de sistemas
 
 
 
-\---
+---
 
 
 
-\## RelaciÃ³n con el mundo real
+## Relación con el mundo real
 
 
 
-La centralizaciÃ³n y monitorizaciÃ³n de logs constituye una de las bases de un SOC y permite posteriormente implementar soluciones SIEM mÃ¡s avanzadas.
+La centralización y monitorización de logs constituye una de las bases de un SOC y permite posteriormente implementar soluciones SIEM más avanzadas.
 

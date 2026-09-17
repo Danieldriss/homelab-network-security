@@ -1,8 +1,8 @@
-﻿\# Parte teÃ³rica de la fase
+﻿# Parte teórica de la fase
 
 
 
-\## IntroducciÃ³n
+## Introducción
 
 
 
@@ -10,15 +10,15 @@ En esta fase se despliega Wazuh como plataforma SIEM dentro del laboratorio.
 
 
 
-El objetivo es evolucionar desde la monitorizaciÃ³n bÃ¡sica y centralizaciÃ³n de logs hacia una plataforma especializada en detecciÃ³n y anÃ¡lisis de eventos de seguridad.
+El objetivo es evolucionar desde la monitorización básica y centralización de logs hacia una plataforma especializada en detección y análisis de eventos de seguridad.
 
 
 
-\---
+---
 
 
 
-\## Â¿QuÃ© es un SIEM?
+## ¿Qué es un SIEM?
 
 
 
@@ -30,27 +30,27 @@ Un SIEM permite:
 
 
 
-\- recopilar eventos
+- recopilar eventos
 
-\- centralizar informaciÃ³n
+- centralizar información
 
-\- analizar logs
+- analizar logs
 
-\- generar alertas
+- generar alertas
 
-\- facilitar investigaciones de seguridad
-
-
-
-\---
+- facilitar investigaciones de seguridad
 
 
 
-\## Wazuh
+---
 
 
 
-Wazuh es una plataforma de seguridad open source orientada a la monitorizaciÃ³n y detecciÃ³n de amenazas.
+## Wazuh
+
+
+
+Wazuh es una plataforma de seguridad open source orientada a la monitorización y detección de amenazas.
 
 
 
@@ -58,45 +58,45 @@ Permite integrar diferentes endpoints y analizar eventos desde una interfaz cent
 
 
 
-\---
+---
 
 
 
-\## Componentes principales
+## Componentes principales
 
 
 
-Una implementaciÃ³n de Wazuh incluye componentes encargados de:
+Una implementación de Wazuh incluye componentes encargados de:
 
 
 
-\- recibir informaciÃ³n
+- recibir información
 
-\- procesar eventos
+- procesar eventos
 
-\- almacenar datos
+- almacenar datos
 
-\- visualizar resultados
-
-
-
-El dashboard proporciona una interfaz grÃ¡fica para consultar la informaciÃ³n recopilada.
+- visualizar resultados
 
 
 
-\---
+El dashboard proporciona una interfaz gráfica para consultar la información recopilada.
 
 
 
-\## Arquitectura centralizada
+---
 
 
 
-En el laboratorio se utiliza una mÃ¡quina dedicada como servidor Wazuh.
+## Arquitectura centralizada
 
 
 
-Los sistemas monitorizados envÃ­an sus eventos hacia este servidor.
+En el laboratorio se utiliza una máquina dedicada como servidor Wazuh.
+
+
+
+Los sistemas monitorizados envían sus eventos hacia este servidor.
 
 
 
@@ -104,11 +104,11 @@ Esto permite disponer de un punto central para analizar la actividad del entorno
 
 
 
-\---
+---
 
 
 
-\## Importancia en un SOC
+## Importancia en un SOC
 
 
 
@@ -120,121 +120,121 @@ Permite investigar:
 
 
 
-\- autenticaciones
+- autenticaciones
 
-\- cambios en sistemas
+- cambios en sistemas
 
-\- actividad sospechosa
+- actividad sospechosa
 
-\- alertas de seguridad
+- alertas de seguridad
 
-\- eventos procedentes de mÃºltiples equipos
+- eventos procedentes de múltiples equipos
 
 
 
-\---
+---
 
 
 
-\## Problemas que se resuelven
+## Problemas que se resuelven
 
 
 
-\- informaciÃ³n distribuida
+- información distribuida
 
-\- dificultad para correlacionar eventos
+- dificultad para correlacionar eventos
 
-\- falta de visibilidad centralizada
+- falta de visibilidad centralizada
 
-\- anÃ¡lisis manual de mÃºltiples equipos
+- análisis manual de múltiples equipos
 
 
 
-\---
+---
 
 
 
-\## Errores comunes
+## Errores comunes
 
 
 
-\- recursos insuficientes
+- recursos insuficientes
 
-\- falta de espacio
+- falta de espacio
 
-\- problemas de conectividad
+- problemas de conectividad
 
-\- servicios del SIEM detenidos
+- servicios del SIEM detenidos
 
-\- configuraciÃ³n incorrecta
+- configuración incorrecta
 
 
 
-\---
+---
 
 
 
-\## CÃ³mo detectar errores
+## Cómo detectar errores
 
 
 
-\- comprobar servicios
+- comprobar servicios
 
-\- revisar almacenamiento
+- revisar almacenamiento
 
-\- validar conectividad
+- validar conectividad
 
-\- comprobar acceso al dashboard
+- comprobar acceso al dashboard
 
-\- consultar logs del sistema
+- consultar logs del sistema
 
 
 
-\---
+---
 
 
 
-\## CÃ³mo solucionarlos
+## Cómo solucionarlos
 
 
 
-\- aumentar recursos cuando sea necesario
+- aumentar recursos cuando sea necesario
 
-\- liberar espacio
+- liberar espacio
 
-\- revisar interfaces de red
+- revisar interfaces de red
 
-\- reiniciar servicios
+- reiniciar servicios
 
-\- comprobar configuraciÃ³n
+- comprobar configuración
 
 
 
-\---
+---
 
 
 
-\## QuÃ© se aprende
+## Qué se aprende
 
 
 
-\- funcionamiento de un SIEM
+- funcionamiento de un SIEM
 
-\- arquitectura SOC
+- arquitectura SOC
 
-\- centralizaciÃ³n de eventos
+- centralización de eventos
 
-\- Wazuh
+- Wazuh
 
-\- troubleshooting de plataformas de seguridad
+- troubleshooting de plataformas de seguridad
 
 
 
-\---
+---
 
 
 
-\## RelaciÃ³n con el mundo real
+## Relación con el mundo real
 
 
 

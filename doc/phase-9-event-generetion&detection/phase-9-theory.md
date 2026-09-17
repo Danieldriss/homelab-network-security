@@ -1,28 +1,28 @@
-﻿\# Parte teÃ³rica de la fase
+﻿# Parte teórica de la fase
 
 
 
-\## IntroducciÃ³n
+## Introducción
 
 
 
-En esta fase se generan eventos de seguridad dentro del laboratorio para comprobar la capacidad de detecciÃ³n del entorno implementado.
+En esta fase se generan eventos de seguridad dentro del laboratorio para comprobar la capacidad de detección del entorno implementado.
 
 
 
-El objetivo es pasar de una infraestructura Ãºnicamente monitorizada a un escenario donde se produce actividad real y posteriormente se analiza mediante Wazuh.
+El objetivo es pasar de una infraestructura únicamente monitorizada a un escenario donde se produce actividad real y posteriormente se analiza mediante Wazuh.
 
 
 
-\---
+---
 
 
 
-\## GeneraciÃ³n de eventos
+## Generación de eventos
 
 
 
-Para comprobar un sistema de monitorizaciÃ³n es necesario generar actividad que pueda quedar registrada.
+Para comprobar un sistema de monitorización es necesario generar actividad que pueda quedar registrada.
 
 
 
@@ -30,21 +30,21 @@ En esta fase se utilizan eventos como:
 
 
 
-\- autenticaciones SSH correctas
+- autenticaciones SSH correctas
 
-\- autenticaciones SSH fallidas
+- autenticaciones SSH fallidas
 
-\- mÃºltiples intentos de acceso
+- múltiples intentos de acceso
 
-\- actividad de reconocimiento de red
-
-
-
-\---
+- actividad de reconocimiento de red
 
 
 
-\## AutenticaciÃ³n SSH
+---
+
+
+
+## Autenticación SSH
 
 
 
@@ -52,23 +52,23 @@ SSH permite administrar sistemas de forma remota.
 
 
 
-Los intentos de autenticaciÃ³n generan registros que pueden utilizarse para identificar accesos legÃ­timos y comportamientos sospechosos.
+Los intentos de autenticación generan registros que pueden utilizarse para identificar accesos legítimos y comportamientos sospechosos.
 
 
 
-\---
+---
 
 
 
-\## Ataques de fuerza bruta
+## Ataques de fuerza bruta
 
 
 
-Un ataque de fuerza bruta consiste en realizar mÃºltiples intentos de autenticaciÃ³n con el objetivo de encontrar credenciales vÃ¡lidas.
+Un ataque de fuerza bruta consiste en realizar múltiples intentos de autenticación con el objetivo de encontrar credenciales válidas.
 
 
 
-Un Ãºnico fallo puede ser legÃ­timo.
+Un único fallo puede ser legítimo.
 
 
 
@@ -76,15 +76,15 @@ Sin embargo, muchos intentos fallidos en un periodo corto pueden representar un 
 
 
 
-\---
+---
 
 
 
-\## Reconocimiento de red
+## Reconocimiento de red
 
 
 
-El reconocimiento consiste en recopilar informaciÃ³n sobre sistemas, puertos y servicios disponibles.
+El reconocimiento consiste en recopilar información sobre sistemas, puertos y servicios disponibles.
 
 
 
@@ -92,15 +92,15 @@ Herramientas de escaneo permiten identificar posibles puntos de entrada antes de
 
 
 
-La visibilidad de este tipo de actividad depende de las fuentes de logs y de las reglas de detecciÃ³n disponibles.
+La visibilidad de este tipo de actividad depende de las fuentes de logs y de las reglas de detección disponibles.
 
 
 
-\---
+---
 
 
 
-\## DetecciÃ³n mediante SIEM
+## Detección mediante SIEM
 
 
 
@@ -108,39 +108,39 @@ Wazuh analiza los eventos recibidos desde los agentes.
 
 
 
-La detecciÃ³n depende de:
+La detección depende de:
 
 
 
-\- calidad de los logs
+- calidad de los logs
 
-\- configuraciÃ³n del agente
+- configuración del agente
 
-\- reglas existentes
+- reglas existentes
 
-\- contexto del evento
+- contexto del evento
 
-\- frecuencia de la actividad
-
-
-
-Un SIEM no detecta automÃ¡ticamente cualquier comportamiento posible.
+- frecuencia de la actividad
 
 
 
-\---
+Un SIEM no detecta automáticamente cualquier comportamiento posible.
 
 
 
-\## Diferencia entre evento y alerta
+---
 
 
 
-Un evento es una acciÃ³n registrada por un sistema.
+## Diferencia entre evento y alerta
 
 
 
-Una alerta se genera cuando dicho evento cumple determinadas condiciones de detecciÃ³n.
+Un evento es una acción registrada por un sistema.
+
+
+
+Una alerta se genera cuando dicho evento cumple determinadas condiciones de detección.
 
 
 
@@ -148,15 +148,15 @@ Por tanto, disponer de logs no significa necesariamente que toda actividad gener
 
 
 
-\---
+---
 
 
 
-\## AnÃ¡lisis de eventos
+## Análisis de eventos
 
 
 
-El analista debe interpretar la informaciÃ³n para determinar si una actividad es legÃ­tima o sospechosa.
+El analista debe interpretar la información para determinar si una actividad es legítima o sospechosa.
 
 
 
@@ -164,125 +164,125 @@ Para ello puede analizar:
 
 
 
-\- direcciÃ³n IP de origen
+- dirección IP de origen
 
-\- usuario
+- usuario
 
-\- frecuencia
+- frecuencia
 
-\- hora
+- hora
 
-\- sistema afectado
+- sistema afectado
 
-\- tipo de evento
+- tipo de evento
 
 
 
-\---
+---
 
 
 
-\## Problemas que se resuelven
+## Problemas que se resuelven
 
 
 
-\- SIEM sin validaciÃ³n prÃ¡ctica
+- SIEM sin validación práctica
 
-\- desconocimiento de la calidad de los logs
+- desconocimiento de la calidad de los logs
 
-\- falta de pruebas de detecciÃ³n
+- falta de pruebas de detección
 
-\- ausencia de eventos reales para analizar
+- ausencia de eventos reales para analizar
 
 
 
-\---
+---
 
 
 
-\## Errores comunes
+## Errores comunes
 
 
 
-\- esperar que toda actividad genere una alerta
+- esperar que toda actividad genere una alerta
 
-\- confundir logs con detecciones
+- confundir logs con detecciones
 
-\- generar eventos en un sistema no monitorizado
+- generar eventos en un sistema no monitorizado
 
-\- no comprobar el agente
+- no comprobar el agente
 
-\- falta de logging adecuado
+- falta de logging adecuado
 
 
 
-\---
+---
 
 
 
-\## CÃ³mo detectar errores
+## Cómo detectar errores
 
 
 
-\- comprobar agentes Wazuh
+- comprobar agentes Wazuh
 
-\- revisar eventos recibidos
+- revisar eventos recibidos
 
-\- consultar logs locales
+- consultar logs locales
 
-\- verificar conectividad
+- verificar conectividad
 
-\- comparar actividad generada con eventos registrados
+- comparar actividad generada con eventos registrados
 
 
 
-\---
+---
 
 
 
-\## CÃ³mo solucionarlos
+## Cómo solucionarlos
 
 
 
-\- revisar la configuraciÃ³n de logging
+- revisar la configuración de logging
 
-\- comprobar los agentes
+- comprobar los agentes
 
-\- validar la comunicaciÃ³n con Wazuh
+- validar la comunicación con Wazuh
 
-\- ajustar las fuentes de eventos cuando sea necesario
+- ajustar las fuentes de eventos cuando sea necesario
 
 
 
-\---
+---
 
 
 
-\## QuÃ© se aprende
+## Qué se aprende
 
 
 
-\- generaciÃ³n de eventos
+- generación de eventos
 
-\- anÃ¡lisis de autenticaciones
+- análisis de autenticaciones
 
-\- detecciÃ³n de actividad sospechosa
+- detección de actividad sospechosa
 
-\- diferencia entre logs y alertas
+- diferencia entre logs y alertas
 
-\- funcionamiento prÃ¡ctico de un SIEM
+- funcionamiento práctico de un SIEM
 
-\- anÃ¡lisis bÃ¡sico desde perspectiva SOC
+- análisis básico desde perspectiva SOC
 
 
 
-\---
+---
 
 
 
-\## RelaciÃ³n con el mundo real
+## Relación con el mundo real
 
 
 
-Los equipos Blue Team realizan pruebas de detecciÃ³n para comprobar que las actividades relevantes quedan registradas y pueden ser investigadas por los analistas de seguridad.
+Los equipos Blue Team realizan pruebas de detección para comprobar que las actividades relevantes quedan registradas y pueden ser investigadas por los analistas de seguridad.
 
