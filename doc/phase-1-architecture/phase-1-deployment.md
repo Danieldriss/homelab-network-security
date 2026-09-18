@@ -6,8 +6,6 @@ El objetivo de esta fase fue desplegar y dejar operativo un firewall profesional
 
 Esta fase es la “cimentación” del laboratorio: sin una red estable y validada, no tiene sentido avanzar a DMZ, SIEM, honeypots o análisis más complejos.
 
----
-
 ## 2. Resultado esperado (qué significa “funciona”)
 
 Se considera completada la fase cuando se cumplen estas condiciones:
@@ -21,8 +19,6 @@ Se considera completada la fase cuando se cumplen estas condiciones:
   - Tiene ruta por defecto hacia 192.168.10.1
   - Puede hacer ping al firewall y a Internet
 - La Web GUI del firewall es accesible desde el cliente.
-
----
 
 ## 3. Evidencias y validación técnica
 
@@ -42,8 +38,6 @@ Esto valida que el firewall está “encendido y en su sitio”: WAN hacia Inter
 - WAN con IP por DHCP (salida a Internet)
 - Interfaces correctamente asignadas (evita el caso típico de LAN/WAN invertidas)
 
----
-
 ### 3.2 Cliente Ubuntu obtiene IP por DHCP (prueba de capa 2/3)
 
 En esta captura se verifica que Ubuntu recibe una IP **IPv4** válida en la interfaz de red (`enp0s3`), dentro de la red 192.168.10.0/24.
@@ -59,8 +53,6 @@ Esto demuestra que:
 - Interfaz en estado UP
 - DHCP funcional en la LAN
 
----
-
 ### 3.3 Enrutamiento: ruta por defecto hacia el firewall (gateway correcto)
 
 Aquí se comprueba que Ubuntu tiene una **ruta por defecto** (default route) apuntando al firewall:
@@ -74,8 +66,6 @@ Esto es esencial: sin ruta por defecto no hay salida fuera de la red local.
 **Validación técnica:**
 - Gateway de Ubuntu = `192.168.10.1`
 - El firewall está actuando como router para la LAN
-
----
 
 ### 3.4 Pruebas de conectividad (ICMP) y verificación de NAT
 
@@ -93,8 +83,6 @@ Se realizan dos pruebas:
 - Enrutamiento: OK
 - NAT: OK (si llega a 8.8.8.8, el firewall está traduciendo y enroutando tráfico hacia WAN)
 
----
-
 ### 3.5 Acceso a la Web GUI (administración del firewall)
 
 OPNsense no se gestiona con escritorio dentro de la VM; se administra desde un cliente en la LAN mediante navegador.
@@ -109,8 +97,6 @@ Esta captura demuestra el acceso a la interfaz web:
 - La Web GUI está disponible en la LAN
 - El servicio de administración del firewall está operativo por HTTPS
 
----
-
 ### 3.6 Dashboard del firewall (estado general del sistema)
 
 Una vez dentro, el dashboard sirve como confirmación visual de estado del firewall y servicios.
@@ -120,8 +106,6 @@ Una vez dentro, el dashboard sirve como confirmación visual de estado del firew
 **Validación técnica:**
 - El sistema está operativo
 - Servicios base disponibles para continuar fases posteriores
-
----
 
 ### 3.7 Resumen de interfaces desde Web GUI (confirmación adicional)
 
@@ -133,8 +117,6 @@ Esta vista confirma la asignación de interfaces desde el panel web, útil para 
 - WAN y LAN identificadas correctamente
 - IPs y estados visibles desde administración web
 
----
-
 ### 3.8 Configuración DHCP en LAN (rango y servicio activo)
 
 Se valida la configuración del DHCPv4 en LAN, incluyendo el rango de direcciones entregadas.
@@ -145,8 +127,6 @@ Se valida la configuración del DHCPv4 en LAN, incluyendo el rango de direccione
 - DHCP habilitado en LAN
 - Rango: `192.168.10.100 – 192.168.10.200`
 - Base sólida para añadir más VMs al laboratorio
-
----
 
 ## 4. Troubleshooting (incidencias reales y solución)
 
@@ -166,8 +146,6 @@ Principales casos resueltos:
      - WAN = em0 (NAT)
      - LAN = em1 (Internal Network)
 
----
-
 ## 5. Estado final de la fase
 
 ✅ Firewall instalado y persistente  
@@ -177,8 +155,6 @@ Principales casos resueltos:
 ✅ Cliente Ubuntu con IP válida  
 ✅ Conectividad LAN e Internet validada  
 ✅ Administración por Web GUI validada  
-
----
 
 ## 6. Próximo paso
 

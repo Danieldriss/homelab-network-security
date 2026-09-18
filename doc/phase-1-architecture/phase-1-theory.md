@@ -8,8 +8,6 @@ El objetivo es crear un entorno controlado que permita simular una infraestructu
 
 Esta fase es crítica, ya que cualquier error en la configuración de red afectará directamente al funcionamiento del resto del laboratorio.
 
----
-
 ## Diseño de la arquitectura
 
 Se implementa una arquitectura segmentada basada en tres redes:
@@ -42,8 +40,6 @@ La separación entre LAN y DMZ permite:
 - limitar el movimiento lateral
 - reducir el impacto de un compromiso
 
----
-
 ## Uso de OPNsense como firewall
 
 Se selecciona OPNsense como firewall principal del laboratorio.
@@ -55,8 +51,6 @@ Se selecciona OPNsense como firewall principal del laboratorio.
 - facilidad de uso en laboratorio  
 - funcionalidades profesionales  
 
----
-
 ## Configuración de red en VirtualBox
 
 Se utilizan adaptadores:
@@ -67,8 +61,6 @@ Se utilizan adaptadores:
 ### ¿Por qué Internal Network?
 
 Permite aislar completamente el laboratorio y simular entornos reales sin interferir con la red del host.
-
----
 
 ## Comandos utilizados
 
@@ -82,8 +74,6 @@ Muestra las interfaces de red y direcciones IP.
 
 👉 Se usa porque es la herramienta moderna en Linux (sustituye a ifconfig).
 
----
-
 ### ip route
 
 ```bash
@@ -93,8 +83,6 @@ ip route
 Muestra la tabla de rutas.
 
 👉 Permite verificar la puerta de enlace (gateway).
-
----
 
 ### ping
 
@@ -106,15 +94,11 @@ Comprueba conectividad entre equipos.
 
 👉 Es el método más simple para validar red.
 
----
-
 ## Problemas que se resuelven
 
 - Falta de segmentación  
 - Falta de control de tráfico  
 - Entornos no realistas  
-
----
 
 ## Errores comunes
 
@@ -122,15 +106,11 @@ Comprueba conectividad entre equipos.
 - IP incorrecta  
 - Gateway mal definido  
 
----
-
 ## Cómo detectar errores
 
 - ping no responde  
 - no hay IP en `ip a`  
 - rutas incorrectas  
-
----
 
 ## Cómo solucionarlos
 
@@ -138,15 +118,11 @@ Comprueba conectividad entre equipos.
 - verificar IP  
 - comprobar gateway  
 
----
-
 ## Qué se aprende
 
 - arquitectura de red  
 - segmentación  
 - conectividad básica  
-
----
 
 ## Relación con el mundo real
 

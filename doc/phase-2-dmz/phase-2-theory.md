@@ -8,8 +8,6 @@ El objetivo es separar los sistemas expuestos de la red interna, creando diferen
 
 La segmentación de red es una medida fundamental de seguridad, ya que permite limitar el alcance de un posible compromiso.
 
----
-
 ## Concepto de DMZ
 
 Una DMZ es una red intermedia utilizada para alojar sistemas o servicios que necesitan estar más expuestos que los equipos de la red interna.
@@ -23,8 +21,6 @@ Permite:
 - aplicar reglas específicas de firewall
 - limitar el impacto de un sistema comprometido
 
----
-
 ## Segmentación mediante OPNsense
 
 OPNsense permite crear interfaces independientes para cada segmento de red.
@@ -36,8 +32,6 @@ En el laboratorio se utilizan:
 - OPT1/DMZ → red de servicios expuestos
 
 El firewall controla qué tráfico puede circular entre estas redes.
-
----
 
 ## Reglas de firewall
 
@@ -60,8 +54,6 @@ flowchart LR
 
 El orden de las reglas es importante, ya que el firewall evalúa el tráfico según las políticas configuradas.
 
----
-
 ## Comandos utilizados
 
 ### ip a
@@ -82,16 +74,12 @@ Permite comprobar si existe conectividad entre diferentes sistemas.
 
 Se utiliza para verificar que la DMZ puede acceder a Internet pero no puede alcanzar la LAN.
 
----
-
 ## Problemas que se resuelven
 
 - redes sin segmentación
 - acceso innecesario entre sistemas
 - movimiento lateral
 - exposición de la red interna
-
----
 
 ## Errores comunes
 
@@ -100,16 +88,12 @@ Se utiliza para verificar que la DMZ puede acceder a Internet pero no puede alca
 - gateway incorrecto
 - reglas demasiado permisivas
 
----
-
 ## Cómo detectar errores
 
 - comprobar conectividad mediante ping
 - revisar las reglas de OPNsense
 - consultar los logs del firewall
 - verificar las direcciones IP
-
----
 
 ## Cómo solucionarlos
 
@@ -118,8 +102,6 @@ Se utiliza para verificar que la DMZ puede acceder a Internet pero no puede alca
 - verificar origen y destino de cada regla
 - revisar gateway y direccionamiento
 
----
-
 ## Qué se aprende
 
 - concepto de DMZ
@@ -127,8 +109,6 @@ Se utiliza para verificar que la DMZ puede acceder a Internet pero no puede alca
 - reglas de firewall
 - control de tráfico
 - principio de mínimo privilegio
-
----
 
 ## Relación con el mundo real
 

@@ -6,15 +6,11 @@ En esta fase se despliegan agentes Wazuh en los sistemas Linux del laboratorio.
 
 El objetivo es conectar los endpoints con el SIEM para que puedan enviar información de seguridad al servidor central.
 
----
-
 ## Agentes Wazuh
 
 Un agente Wazuh es un componente instalado en un endpoint que recopila información relevante del sistema.
 
 Los agentes permiten monitorizar equipos de forma centralizada desde Wazuh.
-
----
 
 ## Modelo agente-servidor
 
@@ -41,8 +37,6 @@ flowchart LR
 
 Este modelo permite gestionar múltiples sistemas desde una plataforma central.
 
----
-
 ## Monitorización de endpoints
 
 Los agentes permiten obtener información relacionada con:
@@ -54,8 +48,6 @@ Los agentes permiten obtener información relacionada con:
 - configuración de seguridad
 
 Esto aumenta considerablemente la visibilidad sobre los endpoints.
-
----
 
 ## Comunicación entre redes
 
@@ -69,15 +61,11 @@ Por ello es necesario comprobar:
 - interfaces
 - conectividad
 
----
-
 ## Estado de los agentes
 
 Un agente correctamente conectado debe aparecer como activo en el dashboard de Wazuh.
 
 Esto permite verificar que existe comunicación entre el endpoint y el SIEM.
-
----
 
 ## Problemas que se resuelven
 
@@ -85,8 +73,6 @@ Esto permite verificar que existe comunicación entre el endpoint y el SIEM.
 - logs únicamente locales
 - dificultad para monitorizar varios sistemas
 - ausencia de recopilación centralizada
-
----
 
 ## Errores comunes
 
@@ -96,8 +82,6 @@ Esto permite verificar que existe comunicación entre el endpoint y el SIEM.
 - problemas de routing
 - interfaces incorrectas
 
----
-
 ## Cómo detectar errores
 
 - comprobar el servicio del agente
@@ -105,8 +89,6 @@ Esto permite verificar que existe comunicación entre el endpoint y el SIEM.
 - revisar el dashboard
 - comprobar rutas
 - revisar logs
-
----
 
 ## Cómo solucionarlos
 
@@ -116,8 +98,6 @@ Esto permite verificar que existe comunicación entre el endpoint y el SIEM.
 - reiniciar el agente
 - validar interfaces y rutas
 
----
-
 ## Qué se aprende
 
 - despliegue de agentes
@@ -125,8 +105,6 @@ Esto permite verificar que existe comunicación entre el endpoint y el SIEM.
 - arquitectura agente-servidor
 - troubleshooting de red
 - integración con SIEM
-
----
 
 ## Relación con el mundo real
 

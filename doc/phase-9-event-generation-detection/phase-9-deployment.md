@@ -6,8 +6,6 @@ El objetivo de esta fase es generar eventos reales dentro del laboratorio para v
 
 Se simulan distintos escenarios habituales en entornos reales, como autenticaciones válidas, intentos fallidos de acceso y patrones de ataque tipo fuerza bruta.
 
----
-
 ## Arquitectura
 
 | Red | Rango | Descripción |
@@ -21,8 +19,6 @@ Se simulan distintos escenarios habituales en entornos reales, como autenticacio
 | Ubuntu LAN Client | 192.168.10.50 | Origen de eventos |
 | Ubuntu Server DMZ | 192.168.20.100 | Servidor monitorizado |
 
----
-
 # Generación de eventos
 
 ## 1. Login SSH exitoso
@@ -33,8 +29,6 @@ Esto genera eventos de autenticación correcta en el SIEM.
 
 ![SSH Success](./evidencias/94-phase9-ssh-login-success.jpg)
 
----
-
 ## 2. Intentos de login fallidos
 
 Se realizan varios intentos de autenticación incorrecta para simular accesos no autorizados.
@@ -42,8 +36,6 @@ Se realizan varios intentos de autenticación incorrecta para simular accesos no
 Estos eventos permiten identificar patrones de fallo de autenticación.
 
 ![SSH Failed](./evidencias/95-phase9-ssh-login-failed.jpg)
-
----
 
 ## 3. Simulación de ataque de fuerza bruta
 
@@ -53,8 +45,6 @@ Esto genera un patrón claro de ataque tipo brute force.
 
 ![Bruteforce](./evidencias/96-phase9-ssh-bruteforce-simulation.jpg)
 
----
-
 ## 4. Actividad de red (escaneo)
 
 Se ejecuta un escaneo de red contra el servidor de la DMZ.
@@ -62,8 +52,6 @@ Se ejecuta un escaneo de red contra el servidor de la DMZ.
 Aunque Wazuh no detecta directamente la herramienta utilizada, sí se registra actividad en los logs del sistema.
 
 ![Network Activity](./evidencias/97-phase9-network-activity-detection.jpg)
-
----
 
 # Análisis de eventos
 
@@ -74,8 +62,6 @@ Durante esta fase se han observado los siguientes comportamientos:
 - múltiples intentos en corto periodo identificados como patrón de ataque
 - actividad de red reflejada en logs del sistema
 
----
-
 # Limitaciones detectadas
 
 Se ha identificado que:
@@ -83,8 +69,6 @@ Se ha identificado que:
 - la ejecución de comandos no se registra por defecto
 - la detección de escaneos requiere reglas específicas adicionales
 - el SIEM depende de la configuración de logging del sistema
-
----
 
 # Resultado
 
@@ -94,8 +78,6 @@ Tras la implementación de esta fase se ha conseguido:
 - simular escenarios habituales de ataque
 - identificar patrones de autenticación sospechosa
 - comprender las limitaciones de detección por defecto
-
----
 
 ## Conclusión
 

@@ -6,8 +6,6 @@ En esta fase se despliega Wazuh como plataforma SIEM dentro del laboratorio.
 
 El objetivo es evolucionar desde la monitorización básica y centralización de logs hacia una plataforma especializada en detección y análisis de eventos de seguridad.
 
----
-
 ## ¿Qué es un SIEM?
 
 SIEM significa Security Information and Event Management.
@@ -20,15 +18,11 @@ Un SIEM permite:
 - generar alertas
 - facilitar investigaciones de seguridad
 
----
-
 ## Wazuh
 
 Wazuh es una plataforma de seguridad open source orientada a la monitorización y detección de amenazas.
 
 Permite integrar diferentes endpoints y analizar eventos desde una interfaz centralizada.
-
----
 
 ## Componentes principales
 
@@ -39,9 +33,20 @@ Una implementación de Wazuh incluye componentes encargados de:
 - almacenar datos
 - visualizar resultados
 
-El dashboard proporciona una interfaz gráfica para consultar la información recopilada.
+```mermaid
+flowchart LR
+    E[Eventos recibidos<br/>de los endpoints] --> P[Motor de reglas<br/>procesa y correla]
+    P --> ST[(Almacenamiento<br/>de eventos)]
+    P --> AL[Alertas]
+    ST --> D[Dashboard Wazuh]
+    AL --> D
 
----
+    style P fill:#2b6cb0,color:#fff
+    style AL fill:#c05621,color:#fff
+    style D fill:#2f855a,color:#fff
+```
+
+El dashboard proporciona una interfaz gráfica para consultar la información recopilada.
 
 ## Arquitectura centralizada
 
@@ -50,8 +55,6 @@ En el laboratorio se utiliza una máquina dedicada como servidor Wazuh.
 Los sistemas monitorizados envían sus eventos hacia este servidor.
 
 Esto permite disponer de un punto central para analizar la actividad del entorno.
-
----
 
 ## Importancia en un SOC
 
@@ -65,16 +68,12 @@ Permite investigar:
 - alertas de seguridad
 - eventos procedentes de múltiples equipos
 
----
-
 ## Problemas que se resuelven
 
 - información distribuida
 - dificultad para correlacionar eventos
 - falta de visibilidad centralizada
 - análisis manual de múltiples equipos
-
----
 
 ## Errores comunes
 
@@ -84,8 +83,6 @@ Permite investigar:
 - servicios del SIEM detenidos
 - configuración incorrecta
 
----
-
 ## Cómo detectar errores
 
 - comprobar servicios
@@ -93,8 +90,6 @@ Permite investigar:
 - validar conectividad
 - comprobar acceso al dashboard
 - consultar logs del sistema
-
----
 
 ## Cómo solucionarlos
 
@@ -104,8 +99,6 @@ Permite investigar:
 - reiniciar servicios
 - comprobar configuración
 
----
-
 ## Qué se aprende
 
 - funcionamiento de un SIEM
@@ -113,8 +106,6 @@ Permite investigar:
 - centralización de eventos
 - Wazuh
 - troubleshooting de plataformas de seguridad
-
----
 
 ## Relación con el mundo real
 

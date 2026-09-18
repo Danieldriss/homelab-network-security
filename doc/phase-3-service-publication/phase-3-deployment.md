@@ -13,8 +13,6 @@ Objetivos específicos:
 - Aplicar restricciones básicas en WAN
 - Documentar troubleshooting real
 
----
-
 ## 2. Arquitectura utilizada
 
 | Zona | Red | IP relevante | Descripción |
@@ -22,8 +20,6 @@ Objetivos específicos:
 | WAN | 10.0.2.0/24 | 10.0.2.15 | NAT VirtualBox |
 | LAN | 192.168.10.0/24 | 192.168.10.1 | Red interna |
 | DMZ | 192.168.20.0/24 | 192.168.20.100 | Servidor Nginx |
-
----
 
 ## 3. Estado inicial
 
@@ -34,8 +30,6 @@ Objetivos específicos:
 ### 3.2 Interfaces activas
 
 ![Interfaces OPNsense](./evidencias/17-phase3-interfaces-overview.jpg)
-
----
 
 ## 4. Validación del servidor en DMZ
 
@@ -49,8 +43,6 @@ sudo systemctl status nginx
 
 ![Nginx en ejecución](./evidencias/18-dmz-nginx-running.jpg)
 
----
-
 ### 4.2 Verificación IP del servidor
 
 Prueba local:
@@ -60,8 +52,6 @@ curl localhost
 ```
 
 ![Curl localhost](./evidencias/19-dmz-curl-localhost-nginx.jpg)
-
----
 
 ### 4.3 Conectividad interna LAN → DMZ
 
@@ -73,8 +63,6 @@ curl 192.168.20.100
 
 ![Curl LAN a DMZ](./evidencias/20-lan-curl-to-dmz-ok.jpg)
 
----
-
 ## 5. Configuración de publicación
 
 ### 5.1 Redirección en VirtualBox (8080 → 80)
@@ -85,8 +73,6 @@ Host: 8080
 Guest: 80  
 
 ![VirtualBox NAT Port Forward](./evidencias/21-virtualbox-nat-portforward-8080.jpg)
-
----
 
 ### 5.2 Creación de Port Forward en OPNsense
 
@@ -103,21 +89,15 @@ Parámetros:
 
 ![NAT Port Forward en OPNsense](./evidencias/22-opnsense-destination-nat-wan80-to-dmz.jpg)
 
----
-
 ### 5.3 Regla WAN generada automáticamente
 
 ![Regla WAN generada](./evidencias/23-opnsense-wan-rule-http-pass.jpg)
-
----
 
 ## 6. Validación externa
 
 ### 6.1 Acceso desde host (http://localhost:8080)
 
 ![Nginx desde host](./evidencias/24-host-browser-http-8080-nginx.jpg)
-
----
 
 ### 6.2 Validación en Live View
 
@@ -129,8 +109,6 @@ Filtro aplicado:
 Se observa tráfico marcado como "rdr rule".
 
 ![Live View WAN HTTP](./evidencias/28-phase3-liveview-clean-wan-http.jpg)
-
----
 
 ### 6.3 Confirmación en logs del servidor
 
@@ -144,8 +122,6 @@ sudo tail -f /var/log/nginx/access.log
 
 Se confirma recepción de solicitudes HTTP provenientes de la WAN.
 
----
-
 ## 7. Restricción básica de seguridad (Hardening inicial)
 
 Se modifica la regla WAN para permitir únicamente acceso desde la IP del host (10.0.2.2/32).
@@ -153,8 +129,6 @@ Se modifica la regla WAN para permitir únicamente acceso desde la IP del host (
 ![Regla WAN restringida](./evidencias/27-phase3-wan-rule-manual-restricted.jpg)
 
 Esto limita la exposición del servicio únicamente al entorno de laboratorio.
-
----
 
 ## 8. Troubleshooting (Incidencias reales)
 
@@ -169,8 +143,6 @@ La opción "Block private networks" en WAN estaba interfiriendo con el tráfico 
 Solución:
 Deshabilitar temporalmente la opción o ajustar la regla WAN manualmente.
 
----
-
 ### 8.2 Regla generada no editable
 
 Síntoma:
@@ -178,8 +150,6 @@ La regla creada automáticamente no permitía edición avanzada.
 
 Solución:
 Eliminar la regla automática y crear una regla manual personalizada.
-
----
 
 ### 8.3 Estados persistentes
 
@@ -189,8 +159,6 @@ Solución aplicada:
 
 Firewall → Diagnostics → States  
 Reset State Table
-
----
 
 ## 9. Resultado final de la fase
 
@@ -202,8 +170,6 @@ Reset State Table
 ✔ Troubleshooting documentado  
 
 La arquitectura ahora permite publicación controlada de servicios en la DMZ.
-
----
 
 ## 10. Conclusión técnica
 

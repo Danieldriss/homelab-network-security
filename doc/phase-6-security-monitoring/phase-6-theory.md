@@ -6,8 +6,6 @@ En esta fase se introduce la monitorización de seguridad mediante una máquina 
 
 El objetivo es obtener visibilidad sobre la actividad de los sistemas y centralizar información relevante antes de implementar un SIEM completo.
 
----
-
 ## Monitorización de seguridad
 
 La monitorización permite observar la actividad de sistemas y redes para detectar errores, comportamientos anómalos o posibles incidentes.
@@ -19,8 +17,6 @@ Las principales fuentes de información son:
 - conexiones
 - tráfico de red
 - eventos de autenticación
-
----
 
 ## Logs
 
@@ -36,8 +32,6 @@ Pueden contener información sobre:
 
 Su análisis es fundamental en operaciones de seguridad.
 
----
-
 ## Rsyslog
 
 Rsyslog permite gestionar y transmitir logs en sistemas Linux.
@@ -45,8 +39,6 @@ Rsyslog permite gestionar y transmitir logs en sistemas Linux.
 Puede utilizarse para enviar registros desde diferentes equipos hacia un servidor central.
 
 Esto facilita el análisis y evita depender exclusivamente de los logs almacenados localmente.
-
----
 
 ## Tcpdump
 
@@ -60,8 +52,6 @@ Permite observar paquetes que atraviesan una interfaz de red.
 
 Es útil para troubleshooting y análisis de seguridad.
 
----
-
 ## Monitorización de procesos y conexiones
 
 Herramientas del sistema permiten comprobar:
@@ -74,11 +64,20 @@ Herramientas del sistema permiten comprobar:
 
 Esta información permite comprender el comportamiento normal de un equipo.
 
----
-
 ## Centralización de logs
 
 Centralizar registros permite disponer de una visión común de diferentes sistemas.
+
+```mermaid
+flowchart LR
+    H1[Firewall OPNsense] -- logs --> R[[Servidor de logs<br/>Rsyslog]]
+    H2[Servidor DMZ] -- logs --> R
+    H3[Cliente LAN] -- logs --> R
+    R --> V[Vista centralizada<br/>para análisis]
+
+    style R fill:#2b6cb0,color:#fff
+    style V fill:#2f855a,color:#fff
+```
 
 Sus ventajas incluyen:
 
@@ -87,16 +86,12 @@ Sus ventajas incluyen:
 - conservar evidencias
 - detectar patrones entre diferentes hosts
 
----
-
 ## Problemas que se resuelven
 
 - logs dispersos
 - falta de visibilidad
 - dificultad de investigación
 - ausencia de monitorización central
-
----
 
 ## Errores comunes
 
@@ -105,16 +100,12 @@ Sus ventajas incluyen:
 - configuración de cliente incorrecta
 - problemas de conectividad
 
----
-
 ## Cómo detectar errores
 
 - comprobar servicios
 - verificar puertos
 - revisar logs locales
 - realizar pruebas de conectividad
-
----
 
 ## Cómo solucionarlos
 
@@ -123,8 +114,6 @@ Sus ventajas incluyen:
 - validar conectividad
 - reiniciar servicios cuando sea necesario
 
----
-
 ## Qué se aprende
 
 - monitorización
@@ -132,8 +121,6 @@ Sus ventajas incluyen:
 - centralización
 - captura de tráfico
 - análisis básico de sistemas
-
----
 
 ## Relación con el mundo real
 
