@@ -1,0 +1,20 @@
+# ufw-rules-example.txt
+#
+# Ejemplo de reglas UFW resultantes en el servidor Ubuntu de la DMZ
+# tras aplicar el hardening de la Fase 5 y publicar el servicio web
+# de la Fase 3. Generado con: sudo ufw status verbose numbered
+#
+# Úsalo como referencia para comparar con tu propia salida de "ufw status".
+
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 22/tcp                     ALLOW IN    Anywhere                   # SSH administración
+[ 2] 80/tcp                     ALLOW IN    Anywhere                   # HTTP (servicio publicado, Fase 3)
+[ 3] 443/tcp                    ALLOW IN    Anywhere                   # HTTPS
+[ 4] 22/tcp (v6)                ALLOW IN    Anywhere (v6)
+[ 5] 80/tcp (v6)                ALLOW IN    Anywhere (v6)
+[ 6] 443/tcp (v6)               ALLOW IN    Anywhere (v6)
