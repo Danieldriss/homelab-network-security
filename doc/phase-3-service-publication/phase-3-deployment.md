@@ -1,4 +1,4 @@
-# Phase 3 – Publicación básica de servicio en DMZ
+# Fase 3 — Publicación básica de servicio en DMZ
 
 ## 1. Objetivo
 
@@ -43,7 +43,9 @@ Objetivos específicos:
 
 Verificación del servicio en la máquina DMZ:
 
+```bash
 sudo systemctl status nginx
+```
 
 ![Nginx en ejecución](./evidencias/18-dmz-nginx-running.jpg)
 
@@ -53,7 +55,9 @@ sudo systemctl status nginx
 
 Prueba local:
 
+```bash
 curl localhost
+```
 
 ![Curl localhost](./evidencias/19-dmz-curl-localhost-nginx.jpg)
 
@@ -63,7 +67,9 @@ curl localhost
 
 Desde la máquina LAN:
 
+```bash
 curl 192.168.20.100
+```
 
 ![Curl LAN a DMZ](./evidencias/20-lan-curl-to-dmz-ok.jpg)
 
@@ -130,7 +136,9 @@ Se observa tráfico marcado como "rdr rule".
 
 En la máquina DMZ:
 
+```bash
 sudo tail -f /var/log/nginx/access.log
+```
 
 ![Access log Nginx](./evidencias/26-dmz-nginx-access-log-from-wan.jpg)
 

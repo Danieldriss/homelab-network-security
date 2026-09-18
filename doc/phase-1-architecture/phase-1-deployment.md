@@ -1,4 +1,4 @@
-# Phase 1 – OPNsense Deployment & Basic Connectivity (Home Lab)
+# Fase 1 — Despliegue de OPNsense y Conectividad Básica (Homelab)
 
 ## 1. Objetivo
 
@@ -152,7 +152,7 @@ Se valida la configuración del DHCPv4 en LAN, incluyendo el rango de direccione
 
 > Nota: En entornos virtualizados es normal encontrar incidencias. Documentarlas demuestra capacidad de diagnóstico y mejora del proceso.
 
-- Registro completo: ver `./evidencias/troubleshooting-log.md`
+- Registro completo: ver [troubleshooting-log.md](./evidencias/troubleshooting-log.md)
 
 Principales casos resueltos:
 

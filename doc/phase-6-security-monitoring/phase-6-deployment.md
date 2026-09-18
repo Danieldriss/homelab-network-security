@@ -1,4 +1,4 @@
-# Phase 6 — Security Monitoring & Log Centralization
+# Fase 6 — Monitorización de Seguridad y Centralización de Logs
 
 ## Objetivo
 

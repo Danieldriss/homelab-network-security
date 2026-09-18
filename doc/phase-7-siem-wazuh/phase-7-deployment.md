@@ -1,4 +1,4 @@
-# Phase 7 — SIEM (Wazuh)
+# Fase 7 — SIEM (Wazuh)
 
 ## Objetivo
 

@@ -1,4 +1,4 @@
-# Phase 2 – Despliegue de DMZ y Segmentación de Red
+# Fase 2 — Despliegue de DMZ y Segmentación de Red
 
 ## 1. Objetivo
 
@@ -105,8 +105,9 @@ Esto confirma que la política de seguridad está siendo aplicada correctamente.
 
 Desde la máquina en DMZ:
 
+```bash
 ping 192.168.10.1
-
+```
 
 Resultado: fallo de comunicación.
 
@@ -118,9 +119,9 @@ Resultado: fallo de comunicación.
 
 Desde la máquina en DMZ:
 
-
+```bash
 ping 8.8.8.8
-
+```
 
 Resultado: comunicación exitosa.
 

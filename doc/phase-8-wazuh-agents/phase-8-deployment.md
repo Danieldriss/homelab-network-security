@@ -1,4 +1,4 @@
-# Phase 8 — Wazuh Agents Deployment
+# Fase 8 — Despliegue de Agentes Wazuh
 
 ## Objetivo
 

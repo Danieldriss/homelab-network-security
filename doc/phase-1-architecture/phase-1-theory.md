@@ -18,6 +18,20 @@ Se implementa una arquitectura segmentada basada en tres redes:
 - LAN → red interna
 - DMZ → red de servicios expuestos
 
+```mermaid
+flowchart LR
+    Internet((Internet)) --- WAN[WAN]
+    WAN --- FW[[Firewall OPNsense]]
+    FW --- LAN[LAN 192.168.10.0/24<br/>Equipos internos]
+    FW --- DMZ[DMZ<br/>Servicios expuestos]
+
+    style FW fill:#2b6cb0,color:#fff
+    style LAN fill:#2f855a,color:#fff
+    style DMZ fill:#c05621,color:#fff
+```
+
+El firewall es el único punto de paso entre las tres redes: todo el tráfico que entra o sale de la LAN y la DMZ pasa obligatoriamente por él, lo que permite aplicar políticas de control en un único lugar.
+
 ### ¿Por qué esta arquitectura?
 
 Se utiliza este modelo porque es el estándar en entornos empresariales.
